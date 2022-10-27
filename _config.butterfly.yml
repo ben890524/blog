@@ -132,7 +132,7 @@ error_img:
 
 # A simple 404 page
 error_404:
-  enable: false
+  enable: true
   subtitle: 'Page Not Found'
   background: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
 
@@ -425,7 +425,7 @@ messenger:
 footer:
   owner:
     enable: true
-    since: 2020
+    since: 2022
   custom_text:
   copyright: true # Copyright of theme and framework
 
@@ -657,7 +657,7 @@ aside:
   hide: false
   button: true
   mobile: true # display on mobile
-  position: right # left or right
+  position: left # left or right
   display:
     archive: true
     tag: true
@@ -711,8 +711,8 @@ busuanzi:
 # Time difference between publish date and now (網頁運行時間)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
-  enable: false
-  publish_date:
+  enable: true
+  publish_date: 10/27/2022 00:00:00  
 
 # Aside widget - Newest Comments
 newest_comments:
@@ -757,8 +757,8 @@ darkmode:
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
 # Don't repeat 不要重複
 rightside_item_order:
-  enable: false
-  hide: # readmode,translate,darkmode,hideAside
+  enable: true
+  hide: darkmode,readmode,hideAside
   show: # toc,chat,comment
 
 # Lightbox (圖片大圖查看模式)
