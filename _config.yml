@@ -104,12 +104,11 @@ theme: butterfly
 deploy:
   type: ''
 
+sitemap:
+    path: sitemap.xml
 
 ---
 layout: false
 ---
 
 google-site-verification: googlee2acbea545cd3339.html
-
-sitemap:
-    path: sitemap.xml
