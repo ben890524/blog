@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: BenLi Blog
-subtitle: ''
-description: ''
+title: 盤子猴 Blog
+subtitle: '想盡辦法在軟體開發中生存吧！'
+description: '這裡是努力成為前端工程師的猴子'
 keywords:
-author: Ben Li
+author: 盤子猴 Ben
 language: zh-TW
 timezone: 'Asia/Taipei'
 
@@ -28,7 +28,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: 
 
 # Writing
 new_post_name: :title.md # File name of new posts
