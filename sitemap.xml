@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://ben890524.github.io/blog/2022/10/30/create-github-profile-repository/</loc>
+    
+    <lastmod>2022-10-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ben890524.github.io/blog/2022/10/30/hello-world/</loc>
     
     <lastmod>2022-10-30</lastmod>
@@ -55,6 +64,27 @@
   </url>
 
   
+  <url>
+    <loc>https://ben890524.github.io/blog/tags/GitHub/</loc>
+    <lastmod>2022-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ben890524.github.io/blog/tags/MarkDown/</loc>
+    <lastmod>2022-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://ben890524.github.io/blog/categories/GitHub/</loc>
+    <lastmod>2022-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>

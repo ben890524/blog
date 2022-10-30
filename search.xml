@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>創建你Github帳號上的自我介紹（Profile Repositoey）</title>
+    <url>/blog/2022/10/30/create-github-profile-repository/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>如果有在做開發或是軟體的研究，或是研究開放的Lib，都會有接觸到版控這件事吧！<br>那你可能就有Github帳號，如果有做一些公開的Repository，你的Github帳號有機會被別人看到。<br>在你的帳號頁面(<code>https://github.com/你的帳號</code>)，就可以填入你自己的簡單個人資料。<br>但如果想要分享更多資訊給別人知道該怎麼做呢？</p>
+<p>Github有提供一個特別的Repository給每個帳號，讓使用者可以自訂想要分享的資訊給大家看到。那這個Repository就是在自己帳號下創建一個跟帳號名字一樣的Repository。<br>例如：我的Github是ben890524，那我的Profile Repository就會是<code>ben890524/ben890524</code>。<br>那接下來就會有簡單的圖文來新增你自己的Profile Repository！</p>
+<h1 id="新增流程"><a href="#新增流程" class="headerlink" title="新增流程"></a>新增流程</h1><h3 id="步驟一"><a href="#步驟一" class="headerlink" title="步驟一"></a>步驟一</h3><p>首先先到<a href="https://github.com/">Github</a>然後登入你的帳號。</p>
+<h3 id="步驟二"><a href="#步驟二" class="headerlink" title="步驟二"></a>步驟二</h3><p>目標是新增一個新的Repository，所以點擊圖片中New的按鈕來新增新的！<br><img src="/blog/images/create-github-profile-repository/post_content_img_1.png"></p>
+<h3 id="步驟三"><a href="#步驟三" class="headerlink" title="步驟三"></a>步驟三</h3><p>進入到新增Repository的設定中。<br><img src="/blog/images/create-github-profile-repository/post_content_img_2.png"><br>在<code>Repository name</code>那邊填入你的Github帳號名稱，填入後Github也會提醒你，這是一個很特別的Repository，讓你可以新增一個自己的Profile README！<br>簡單做個Description，且<strong>請記得要選公開（public）和初始化Repository時要新增一個README檔案（README.md）！</strong><br>最後就可以到最下面完成創建Repository了！</p>
+<h3 id="步驟四"><a href="#步驟四" class="headerlink" title="步驟四"></a>步驟四</h3><p>要開始編輯自己的Profile了，移動到<code>你的帳號名稱/你的帳號名稱</code>下的<code>README.md</code>。<br><img src="/blog/images/create-github-profile-repository/post_content_img_3.png"><br>按下編輯鍵（一枝筆的Icon），就可以編輯專屬於你的Profile介紹了！</p>
+<h3 id="步驟五"><a href="#步驟五" class="headerlink" title="步驟五"></a>步驟五</h3><p>最後等你編輯完成後，<strong>記得將你編輯的改變Commit上去Github的Repository上</strong>！<br>接下來你就可以到帳號頁面(<code>https://github.com/你的帳號</code>)看成果啦~<br><img src="/blog/images/create-github-profile-repository/post_content_img_4.png"></p>
+<h1 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h1><p>這是一個讓大家認識你的一個好機會，但前提也是你的Github要有曝光度XD<br>如果不喜歡Online的MarkDown編輯器的話也可以將Repository Clone下來，再本地端進行編輯~<br>也可以用其他線上的軟體撰寫好後，再貼上進行更動~</p>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><ul>
+<li><a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/about-your-profile">Github - About your profile</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>GitHub</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>MarkDown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/blog/2022/10/30/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
