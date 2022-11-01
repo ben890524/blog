@@ -18,22 +18,22 @@ Github有提供一個特別的Repository給每個帳號，讓使用者可以自�
 例如：我的Github是ben890524，那我的Profile Repository就會是`ben890524/ben890524`。
 那接下來就會有簡單的圖文來新增你自己的Profile Repository！
 # 新增流程
-### 步驟一
+## 步驟一
 首先先到[Github](https://github.com/)然後登入你的帳號。
-### 步驟二
+## 步驟二
 目標是新增一個新的Repository，所以點擊圖片中New的按鈕來新增新的！
 ![](/images/create-github-profile-repository/post_content_img_1.png)
-### 步驟三
+## 步驟三
 進入到新增Repository的設定中。
 ![](/images/create-github-profile-repository/post_content_img_2.png)
 在`Repository name`那邊填入你的Github帳號名稱，填入後Github也會提醒你，這是一個很特別的Repository，讓你可以新增一個自己的Profile README！
 簡單做個Description，且**請記得要選公開（public）和初始化Repository時要新增一個README檔案（README.md）！**
 最後就可以到最下面完成創建Repository了！
-### 步驟四
+## 步驟四
 要開始編輯自己的Profile了，移動到`你的帳號名稱/你的帳號名稱`下的`README.md`。
 ![](/images/create-github-profile-repository/post_content_img_3.png)
 按下編輯鍵（一枝筆的Icon），就可以編輯專屬於你的Profile介紹了！
-### 步驟五
+## 步驟五
 最後等你編輯完成後，**記得將你編輯的改變Commit上去Github的Repository上**！
 接下來你就可以到帳號頁面(`https://github.com/你的帳號`)看成果啦~
 ![](/images/create-github-profile-repository/post_content_img_4.png)
