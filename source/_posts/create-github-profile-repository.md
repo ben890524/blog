@@ -6,6 +6,8 @@ tags:
 - MarkDown
 categories:
 - GitHub
+top_img: /images/create-github-profile-repository/top_img.jpg
+cover: /images/create-github-profile-repository/cover.png
 # id: post-1
 ---
 # 前言
