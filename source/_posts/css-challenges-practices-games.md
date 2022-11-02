@@ -8,6 +8,7 @@ categories:
 - CSS
 top_img: 
 cover: /images/css-challenges-practices-games/cover.png
+# id: post-2
 ---
 
 ## 前言
