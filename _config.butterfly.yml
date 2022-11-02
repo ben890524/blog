@@ -116,7 +116,7 @@ category_per_img: /images/default_top_img.jpg
 
 cover:
   # display the cover or not (是否顯示文章封面)
-  index_enable: true
+  index_enable: false
   aside_enable: true
   archives_enable: true
   # the position of cover in home page (封面顯示的位置)
@@ -154,7 +154,7 @@ post_meta:
 # wordcount (字數統計)
 # see https://butterfly.js.org/posts/ceeb73f/#字數統計
 wordcount:
-  enable: false
+  enable: true
   post_wordcount: true
   min2read: true
   total_wordcount: true
