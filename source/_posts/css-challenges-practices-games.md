@@ -6,7 +6,7 @@ tags:
 - Challenge
 categories:
 - CSS
-top_img: 
+top_img: /images/default_banner.png
 cover: /images/css-challenges-practices-games/cover.png
 # id: post-2
 ---
@@ -39,7 +39,7 @@ CSS Flexbox排版是一個容器式的排版樣式，比起傳統的position和f
 ![](/images/css-challenges-practices-games/post_content_img_2.png)
 主要分成三個區塊：
 - 白色區塊：關於題目的敘述及解釋，且會有此CSS樣式各個屬性值的解釋，也會有簡單的範例，非常清楚~
-- 黃色區塊：，所以才說這樣邊學習邊練習的方式很好吧XD
+- 黃色區塊：會顯示青蛙與荷葉，目標是讓青蛙到與他相同顏色的荷葉上且符合排版，這裡也是及時顯示結果的。
 - 紅色區塊：
   - 撰寫CSS樣式的區塊，題目會告訴你最多會有幾行CSS樣式要填寫，當然後面如果你精通了，那就可以寫得更短XD。
   - 只要寫出的CSS樣式是可以運行的，就會馬上反映到黃色區塊。當你完成題目需求後，紅色區塊右下角的下一關（Next）才會亮起，就可以到下一關了！

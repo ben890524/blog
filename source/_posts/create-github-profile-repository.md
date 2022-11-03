@@ -6,7 +6,7 @@ tags:
 - MarkDown
 categories:
 - GitHub
-top_img: /images/create-github-profile-repository/top_img.jpg
+top_img: /images/default_banner.png
 cover: /images/create-github-profile-repository/cover.png
 # id: post-1
 ---
