@@ -1,5 +1,5 @@
 ---
-title: 物件導向 概念 - 物件導向四大概念
+title: 物件導向 特性 - 物件導向四大特性
 date: 2022-11-04 12:57:45
 tags:
 - Object Oriented
