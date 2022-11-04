@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>物件導向 概念 - 物件導向四大概念 | 猴子Ben不見</title><meta name="author" content="猴子 Ben"><meta name="copyright" content="猴子 Ben"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="fffdfa"><meta name="description" content="前言本篇要來介紹物件導向的四大概念，那就來簡單介紹物件導向是怎麼樣的概念~物件導向是將大部分的程式碼變成像是物件的方式進行呈現，程式互相會是以物件的方式進行溝通。物件跟物件之間的溝通，可以想成是人與人進行溝通，每個人都會有姓名、性別、年齡等等，這些在物件就是屬性（Attributes）；每個人也都會有技能或是動作，在物件我們就稱它為方法（Methods）。一個物件會由屬性跟方法所組成，但這個時候你">
+<meta property="og:type" content="article">
+<meta property="og:title" content="物件導向 概念 - 物件導向四大概念">
+<meta property="og:url" content="https://ben890524.github.io/blog/2022/11/04/object-oriented-concepts/index.html">
+<meta property="og:site_name" content="猴子Ben不見">
+<meta property="og:description" content="前言本篇要來介紹物件導向的四大概念，那就來簡單介紹物件導向是怎麼樣的概念~物件導向是將大部分的程式碼變成像是物件的方式進行呈現，程式互相會是以物件的方式進行溝通。物件跟物件之間的溝通，可以想成是人與人進行溝通，每個人都會有姓名、性別、年齡等等，這些在物件就是屬性（Attributes）；每個人也都會有技能或是動作，在物件我們就稱它為方法（Methods）。一個物件會由屬性跟方法所組成，但這個時候你">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://ben890524.github.io/blog/images/favicon.ico">
+<meta property="article:published_time" content="2022-11-04T04:57:45.000Z">
+<meta property="article:modified_time" content="2022-11-04T16:00:38.398Z">
+<meta property="article:author" content="猴子 Ben">
+<meta property="article:tag" content="Object Oriented">
+<meta property="article:tag" content="C#">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ben890524.github.io/blog/images/favicon.ico"><link rel="shortcut icon" href="/blog/images/favicon.ico"><link rel="canonical" href="https://ben890524.github.io/blog/2022/11/04/object-oriented-concepts/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/blog/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/blog/',
+  algolia: undefined,
+  localSearch: {"path":"/blog/search.xml","preload":true,"languages":{"hits_empty":"找不到您查詢的內容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '物件導向 概念 - 物件導向四大概念',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-05 00:00:38'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'fffdfa')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/blog/css/header.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/blog/images/blogger_avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/blog/tags/"><div class="headline">標籤</div><div class="length-num">6</div></a><a href="/blog/categories/"><div class="headline">分類</div><div class="length-num">3</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 關於我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/blog/images/default_banner.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/blog/">猴子Ben不見</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜尋</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 關於我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">物件導向 概念 - 物件導向四大概念</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2022-11-04T04:57:45.000Z" title="發表於 2022-11-04 12:57:45">2022-11-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2022-11-04T16:00:38.398Z" title="更新於 2022-11-05 00:00:38">2022-11-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/blog/categories/Object-Oriented/">Object Oriented</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字數總計:</span><span class="word-count">1.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀時長:</span><span>5分鐘</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="物件導向 概念 - 物件導向四大概念"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇要來介紹物件導向的四大概念，那就來簡單介紹物件導向是怎麼樣的概念~<br>物件導向是將大部分的程式碼變成像是物件的方式進行呈現，程式互相會是以物件的方式進行溝通。物件跟物件之間的溝通，可以想成是人與人進行溝通，每個人都會有姓名、性別、年齡等等，這些在物件就是<strong>屬性（Attributes）</strong>；每個人也都會有技能或是動作，在物件我們就稱它為<strong>方法（Methods）</strong>。<br>一個物件會由屬性跟方法所組成，但這個時候你可能會有一些困惑，如果人是一個物件，但有可能我有一些事情是不想要給別人知道的，那該怎麼辦？<br>物件的屬性和方法都有它的<strong>可視性（Visibility）</strong>，可以使比較敏感的資料不被揭露，達到資料隱藏（Information Hiding）的效果。<br>簡單的介紹完物件導向的基本後，就來介紹物件導向的四大基本概念吧~</p>
+<h2 id="物件導向四大基本概念"><a href="#物件導向四大基本概念" class="headerlink" title="物件導向四大基本概念"></a>物件導向四大基本概念</h2><ol>
+<li>封裝（Encapsulation）</li>
+<li>抽象（Abstraction）</li>
+<li>繼承（Inheritance）</li>
+<li>多型（Polymorphism）</li>
+</ol>
+<h3 id="封裝（Encapsulation）"><a href="#封裝（Encapsulation）" class="headerlink" title="封裝（Encapsulation）"></a>封裝（Encapsulation）</h3><p>通常一個物件會有一些讀寫的限制，像是public或是private等等的限制。封裝是對一個物件的規範，物件不能將所有資訊顯露給使用者（caller），若是一個物件的部分資訊比較敏感，這些資訊又全都顯露給使用者，就會有安全的問題，可以想像使用者只要知道物件有甚麼方法，不需要知道是怎麼實作的，也就是資料隱藏（Information hiding）。</p>
+<p>以下以一個C#簡單的getter和setter來解釋：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Student</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="built_in">int</span> Age &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 上面是C#的寫法，在其他物件導向語言，大致上要表達的意思下</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Student</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">int</span> _age;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">GetAge</span>()</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">return</span> _age;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetAge</span>(<span class="params"><span class="built_in">int</span> age</span>)</span></span><br><span class="line">  &#123;</span><br><span class="line">    _age = age;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有一個Student Class有Age這個屬性（Attribute），且<code>定義&#123; get; set; &#125;</code>，代表他有public的getter和setter，皆為任何使用者都可以使用的。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Student</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="built_in">int</span> Age &#123; <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 上面是C#的寫法，在其他物件導向語言，大致上要表達的意思下</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Student</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">int</span> _age;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">GetAge</span>()</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">return</span> _age;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">SetAge</span>(<span class="params"><span class="built_in">int</span> age</span>)</span></span><br><span class="line">  &#123;</span><br><span class="line">    _age = age;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有一個Student有Age這個屬性(Attribute)，且<code>定義&#123; get; private set; &#125;</code>，代表他有public的getter和private的setter，private的setter只有在自己這個物件裡面可以被調用。</p>
+<h3 id="抽象（Abstraction）"><a href="#抽象（Abstraction）" class="headerlink" title="抽象（Abstraction）"></a>抽象（Abstraction）</h3><p>會定義一個父類別，父類別會先有一線基本功能，也可以擁有一些已經被定義的方法和抽象方法，抽象方法像是abstract function或implement function，這類型的方法不能夠再父類別被實作，會在繼承的子類進行實作，但抽象方便規方便但不能濫用。</p>
+<p>定義一個抽象的父類，且有抽象方法並未實作：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title">Bird</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">Fly</span>()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>繼承抽象父類後，一定要實作父類的抽象方法：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SomeBird</span>:<span class="title">Bird</span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Fly</span>()</span> =&gt; Console.WriteLine(<span class="string">&quot;I can fly.&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="繼承（Inheritance）"><a href="#繼承（Inheritance）" class="headerlink" title="繼承（Inheritance）"></a>繼承（Inheritance）</h3><p>會基於某個父類別對物件的定義加以擴充，子類別可以繼承父類別原來的某些定義，並也可能增加原來的父類別所沒有的定義，或者是重新定義父類別中的某些特性（Override），但在定義父類別與繼承子類別時一定要遵守IS-A的概念。<br>IS-A概念就是：假如要使A Class繼承B Class，那A就一定要是一種B，A is a kind of B.</p>
+<p>以下是bird的父類，有一個fly()的方法。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Bird</span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Fly</span>()</span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;Bird can fly.&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以下是繼承bird父類並擴充的子類”鴿子”（Pigeon）：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Pigeon</span>:<span class="title">Bird</span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">int</span> speed = <span class="number">20</span>;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Fly</span>()</span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;Pigeon can fly.&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>下列未遵守IS-A概念：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Penguin</span>:<span class="title">Bird</span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Fly</span>()</span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;Penguin ???&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>企鵝不會飛，但是卻給牠一個飛行的方法，明顯的企鵝不是一種會飛的鳥類。</p>
+<h3 id="多型（Polymorphism）"><a href="#多型（Polymorphism）" class="headerlink" title="多型（Polymorphism）"></a>多型（Polymorphism）</h3><p>多型是指的是使用同一個操作介面，以操作不同的物件實例，多型操作在物件導向上是為了降低對操作介面的依賴程度，這是一種抽換概念，之後在各式Design Pattern中會常用到此概念。</p>
+<p>今天有一個Service的class專門計算一台手機打折過後的價格：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SaleService</span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">double</span> _discount = <span class="number">0.8</span>;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="built_in">double</span> <span class="title">IphonePriceWithDiscount</span>(<span class="params">Iphone phone</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> phone.price * <span class="keyword">this</span>._discount;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="built_in">double</span> <span class="title">AndroidPriceWithDiscount</span>(<span class="params">Android phone</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> phone.price * <span class="keyword">this</span>._discount;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>從上述程式碼發現，如果我每有一種作業系統的手機，我就要新增一種方法去計算那種作業系統手機的價格。<br>所以定義一種操作介面為父類，讓各式作業系統的手機繼承，並對一種操作介面進行操作即可。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Phone</span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="built_in">int</span> phonePrice &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Phone</span>(<span class="params"><span class="built_in">int</span> price</span>)</span>&#123;</span><br><span class="line">    phonePrice = price;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Iphone</span>:<span class="title">Phone</span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Iphone</span>(<span class="params"><span class="built_in">int</span> price</span>):<span class="title">base</span>(<span class="params">price</span>)</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Android</span>:<span class="title">Phone</span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Android</span>(<span class="params"><span class="built_in">int</span> price</span>):<span class="title">base</span>(<span class="params">price</span>)</span>&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>根據上方更改後的程式碼，可以對Service進行改造：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SaleService</span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">double</span> _discount = <span class="number">0.8</span>;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="built_in">double</span> <span class="title">PhonePriceWithDiscount</span>(<span class="params">Phone phone</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> phone.phonePrice * <span class="keyword">this</span>._discount;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h2><p>本篇簡單的介紹了物件導向，也介紹了物件導向的四大基本概念，封裝、抽象、繼承和多型，物件導向程式設計都會圍繞在些概念作為基礎，去做發想，有很多變化。目前很多的後端語言也都是物件導向的，像是C#、Java、Javascript等等，但也有一些不是物件導向的後端語言，像是Golang等等，所以學會物件導向設計理念後，在各個物件導向語言之間轉換，就比較不會花更多時間，就可以專心研究語言的語法跟特性上。<br>有了物件導向的概念對程式的敏感度也會上升，後續也有一些原則是建立在物件導向概念上的，像是SOLID原則，或是Design Pattern，所以把物件導向程式設計學好一定不會吃虧，我有時也會將生活中的一些東西，想成是物件XD，所以學習也可以為生活中增添一番趣味（？<br>如果本篇有誤，可以聯繫我，讓我修正QAQ，之後有空應該會介紹物件導向的五大原則SOLID~</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://ben890524.github.io/blog">猴子 Ben</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://ben890524.github.io/blog/2022/11/04/object-oriented-concepts/">https://ben890524.github.io/blog/2022/11/04/object-oriented-concepts/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://ben890524.github.io/blog" target="_blank">猴子Ben不見</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/blog/tags/Object-Oriented/">Object Oriented</a><a class="post-meta__tags" href="/blog/tags/C/">C#</a></div><div class="post_share"><div class="social-share" data-image="/blog/images/favicon.ico" data-sites="facebook,twitter,wechat,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/blog/2022/11/02/css-challenges-practices-games/"><img class="next-cover" src="/blog/images/css-challenges-practices-games/cover.png" onerror="onerror=null;src='/blog/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">CSS挑戰 / CSS練習 / CSS小遊戲</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/blog/images/blogger_avatar.jpg" onerror="this.onerror=null;this.src='/blog/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">猴子 Ben</div><div class="author-info__description">這裡是努力成為前端工程師的猴子</div></div><div class="card-info-data site-data is-center"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/blog/tags/"><div class="headline">標籤</div><div class="length-num">6</div></a><a href="/blog/categories/"><div class="headline">分類</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ben890524"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://www.instagram.com/ben890524" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a><a class="social-icon" href="https://www.linkedin.com/in/%E7%A7%89%E6%AC%A3-%E6%9D%8E-319884201/" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">部落格還在努力生成中QAQ</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E5%9B%9B%E5%A4%A7%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">2.</span> <span class="toc-text">物件導向四大基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%9D%EF%BC%88Encapsulation%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">封裝（Encapsulation）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%EF%BC%88Abstraction%EF%BC%89"><span class="toc-number">2.2.</span> <span class="toc-text">抽象（Abstraction）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B9%BC%E6%89%BF%EF%BC%88Inheritance%EF%BC%89"><span class="toc-number">2.3.</span> <span class="toc-text">繼承（Inheritance）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%9E%8B%EF%BC%88Polymorphism%EF%BC%89"><span class="toc-number">2.4.</span> <span class="toc-text">多型（Polymorphism）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%B5%90"><span class="toc-number">3.</span> <span class="toc-text">小結</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/blog/2022/11/04/object-oriented-concepts/" title="物件導向 概念 - 物件導向四大概念"><img src="/blog/images/favicon.ico" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="物件導向 概念 - 物件導向四大概念"/></a><div class="content"><a class="title" href="/blog/2022/11/04/object-oriented-concepts/" title="物件導向 概念 - 物件導向四大概念">物件導向 概念 - 物件導向四大概念</a><time datetime="2022-11-04T04:57:45.000Z" title="發表於 2022-11-04 12:57:45">2022-11-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/2022/11/02/css-challenges-practices-games/" title="CSS挑戰 / CSS練習 / CSS小遊戲"><img src="/blog/images/css-challenges-practices-games/cover.png" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="CSS挑戰 / CSS練習 / CSS小遊戲"/></a><div class="content"><a class="title" href="/blog/2022/11/02/css-challenges-practices-games/" title="CSS挑戰 / CSS練習 / CSS小遊戲">CSS挑戰 / CSS練習 / CSS小遊戲</a><time datetime="2022-11-02T02:08:21.000Z" title="發表於 2022-11-02 10:08:21">2022-11-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/2022/10/30/create-github-profile-repository/" title="創建你Github帳號上的自我介紹（Profile Repositoey）"><img src="/blog/images/create-github-profile-repository/cover.png" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="創建你Github帳號上的自我介紹（Profile Repositoey）"/></a><div class="content"><a class="title" href="/blog/2022/10/30/create-github-profile-repository/" title="創建你Github帳號上的自我介紹（Profile Repositoey）">創建你Github帳號上的自我介紹（Profile Repositoey）</a><time datetime="2022-10-30T13:20:52.000Z" title="發表於 2022-10-30 21:20:52">2022-10-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/2022/10/27/hello-world/" title="Hello World"><img src="/blog/images/favicon.ico" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/blog/2022/10/27/hello-world/" title="Hello World">Hello World</a><time datetime="2022-10-27T13:20:52.000Z" title="發表於 2022-10-27 21:20:52">2022-10-27</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/blog/images/default_footer_img.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2022 By 猴子 Ben</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">到最底啦！往上一點吧 ~<br>Top / Footer Image from Pattern Library.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜尋</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  資料庫載入中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/blog/js/utils.js"></script><script src="/blog/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/blog/js/search/local-search.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
