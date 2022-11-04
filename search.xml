@@ -88,8 +88,8 @@
 ]]></content>
   </entry>
   <entry>
-    <title>物件導向 概念 - 物件導向四大概念</title>
-    <url>/blog/2022/11/04/object-oriented-concepts/</url>
+    <title>物件導向 特性 - 物件導向四大特性</title>
+    <url>/blog/2022/11/04/object-oriented-features-concepts/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇要來介紹物件導向的四大概念，那就來簡單介紹物件導向是怎麼樣的概念~<br>物件導向是將大部分的程式碼變成像是物件的方式進行呈現，程式互相會是以物件的方式進行溝通。物件跟物件之間的溝通，可以想成是人與人進行溝通，每個人都會有姓名、性別、年齡等等，這些在物件就是<strong>屬性（Attributes）</strong>；每個人也都會有技能或是動作，在物件我們就稱它為<strong>方法（Methods）</strong>。<br>一個物件會由屬性跟方法所組成，但這個時候你可能會有一些困惑，如果人是一個物件，但有可能我有一些事情是不想要給別人知道的，那該怎麼辦？<br>物件的屬性和方法都有它的<strong>可視性（Visibility）</strong>，可以使比較敏感的資料不被揭露，達到資料隱藏（Information Hiding）的效果。<br>簡單的介紹完物件導向的基本後，就來介紹物件導向的四大基本概念吧~</p>
 <h2 id="物件導向四大基本概念"><a href="#物件導向四大基本概念" class="headerlink" title="物件導向四大基本概念"></a>物件導向四大基本概念</h2><ol>
 <li>封裝（Encapsulation）</li>
