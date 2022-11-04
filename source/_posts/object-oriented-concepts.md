@@ -8,6 +8,7 @@ categories:
 - Object Oriented
 top_img: /images/default_banner.png
 cover: 
+# id: post-3
 ---
 ## 前言
 本篇要來介紹物件導向的四大概念，那就來簡單介紹物件導向是怎麼樣的概念~
@@ -73,13 +74,13 @@ public class Student
 定義一個抽象的父類，且有抽象方法並未實作：
 ``` C#
 abstract class Bird{
-    public abstract void fly();
+    public abstract void Fly();
 }
 ```
 繼承抽象父類後，一定要實作父類的抽象方法：
 ``` C#
 public class SomeBird:Bird{
-  public override void fly() => Console.WriteLine("I can fly.");
+  public override void Fly() => Console.WriteLine("I can fly.");
 }
 ```
 
@@ -90,7 +91,7 @@ IS-A概念就是：假如要使A Class繼承B Class，那A就一定要是一種B
 以下是bird的父類，有一個fly()的方法。
 ``` C#
 public class Bird{
-  public void fly(){
+  public void Fly(){
     Console.WriteLine("Bird can fly.");
   }
 }
@@ -99,7 +100,7 @@ public class Bird{
 ``` C#
 public class Pigeon:Bird{
   private int speed = 20;
-  public override void fly(){
+  public override void Fly(){
     Console.WriteLine("Pigeon can fly.");
   }
 }
@@ -107,7 +108,7 @@ public class Pigeon:Bird{
 下列未遵守IS-A概念：
 ``` C#
 public class Penguin:Bird{
-  public override void fly(){
+  public override void Fly(){
     Console.WriteLine("Penguin ???");
   }
 }
@@ -120,12 +121,12 @@ public class Penguin:Bird{
 今天有一個Service的class專門計算一台手機打折過後的價格：
 ``` C#
 public class SaleService{
-  private double discount = 0.8;
-  public double iphonePriceWithDiscount(Iphone phone){
-    return phone.price * this.discount;
+  private double _discount = 0.8;
+  public double IphonePriceWithDiscount(Iphone phone){
+    return phone.price * this._discount;
   }
-  public double androidPriceWithDiscount(Android phone){
-    return phone.price * this.discount;
+  public double AndroidPriceWithDiscount(Android phone){
+    return phone.price * this._discount;
   }
 }
 ```
@@ -133,9 +134,9 @@ public class SaleService{
 所以定義一種操作介面為父類，讓各式作業系統的手機繼承，並對一種操作介面進行操作即可。
 ``` C#
 public class Phone{
-  public int PhonePrice { get; set; }
+  public int phonePrice { get; set; }
   public Phone(int price){
-    PhonePrice = price;
+    phonePrice = price;
   }
 }
 public class Iphone:Phone{
@@ -148,11 +149,14 @@ public class Android:Phone{
 根據上方更改後的程式碼，可以對Service進行改造：
 ``` C#
 public class SaleService{
-  private double _Discount = 0.8;
-  public double phonePriceWithDiscount(Phone phone){
-    return phone.phonePrice * this._Discount;
+  private double _discount = 0.8;
+  public double PhonePriceWithDiscount(Phone phone){
+    return phone.phonePrice * this._discount;
   }
 }
 ```
 
 ## 小結
+本篇簡單的介紹了物件導向，也介紹了物件導向的四大基本概念，封裝、抽象、繼承和多型，物件導向程式設計都會圍繞在些概念作為基礎，去做發想，有很多變化。目前很多的後端語言也都是物件導向的，像是C#、Java、Javascript等等，但也有一些不是物件導向的後端語言，像是Golang等等，所以學會物件導向設計理念後，在各個物件導向語言之間轉換，就比較不會花更多時間，就可以專心研究語言的語法跟特性上。
+有了物件導向的概念對程式的敏感度也會上升，後續也有一些原則是建立在物件導向概念上的，像是SOLID原則，或是Design Pattern，所以把物件導向程式設計學好一定不會吃虧，我有時也會將生活中的一些東西，想成是物件XD，所以學習也可以為生活中增添一番趣味（？
+如果本篇有誤，可以聯繫我，讓我修正QAQ，之後有空應該會介紹物件導向的五大原則SOLID~
