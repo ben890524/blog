@@ -41,7 +41,7 @@ Github有提供一個特別的Repository給每個帳號，讓使用者可以自�
 接下來你就可以到帳號頁面(`https://github.com/你的帳號`)看成果啦~
 ![](/images/create-github-profile-repository/post_content_img_4.png)
 
-## 小結
+## 總結
 這是一個讓大家認識你的一個好機會，但前提也是你的Github要有曝光度XD
 如果不喜歡Online的MarkDown編輯器的話也可以將Repository Clone下來，再本地端進行編輯~
 也可以用其他線上的軟體撰寫好後，再貼上進行更動~
