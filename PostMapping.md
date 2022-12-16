@@ -4,3 +4,4 @@ id - post_name
 3 - object-oriented-features-concepts
 4 - object-oriented-principles-solid
 5 - nuxt3-introduction
+6 - frontend-knowledge
