@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://ben890524.github.io/blog/googlee2acbea545cd3339.html</loc>
+    
+    <lastmod>2022-12-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ben890524.github.io/blog/2022/10/30/create-github-profile-repository/</loc>
     
     <lastmod>2022-12-16</lastmod>
@@ -20,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://ben890524.github.io/blog/2022/11/02/css-challenges-practices-games/</loc>
+    <loc>https://ben890524.github.io/blog/2022/12/16/frontend-knowledge/</loc>
     
     <lastmod>2022-12-16</lastmod>
     
@@ -29,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://ben890524.github.io/blog/2022/12/16/frontend-knowledge/</loc>
+    <loc>https://ben890524.github.io/blog/2022/11/02/css-challenges-practices-games/</loc>
     
     <lastmod>2022-12-16</lastmod>
     
@@ -66,15 +75,6 @@
   
   <url>
     <loc>https://ben890524.github.io/blog/2022/11/04/object-oriented-principles-solid/</loc>
-    
-    <lastmod>2022-12-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ben890524.github.io/blog/googlee2acbea545cd3339.html</loc>
     
     <lastmod>2022-12-16</lastmod>
     
@@ -124,20 +124,6 @@
   </url>
   
   <url>
-    <loc>https://ben890524.github.io/blog/tags/CSS/</loc>
-    <lastmod>2022-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ben890524.github.io/blog/tags/Challenge/</loc>
-    <lastmod>2022-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ben890524.github.io/blog/tags/Frontend/</loc>
     <lastmod>2022-12-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -152,7 +138,21 @@
   </url>
   
   <url>
+    <loc>https://ben890524.github.io/blog/tags/CSS/</loc>
+    <lastmod>2022-12-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ben890524.github.io/blog/tags/Javascript/</loc>
+    <lastmod>2022-12-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ben890524.github.io/blog/tags/Challenge/</loc>
     <lastmod>2022-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -196,14 +196,14 @@
   </url>
   
   <url>
-    <loc>https://ben890524.github.io/blog/categories/CSS/</loc>
+    <loc>https://ben890524.github.io/blog/categories/Frontend/</loc>
     <lastmod>2022-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ben890524.github.io/blog/categories/Frontend/</loc>
+    <loc>https://ben890524.github.io/blog/categories/CSS/</loc>
     <lastmod>2022-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

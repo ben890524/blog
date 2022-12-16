@@ -24,6 +24,40 @@
       </tags>
   </entry>
   <entry>
+    <title>前端知識區 / 前端面試題</title>
+    <url>/blog/2022/12/16/frontend-knowledge/</url>
+    <content><![CDATA[<h1 id="For-Front-End-Learning"><a href="#For-Front-End-Learning" class="headerlink" title="For Front-End Learning"></a>For Front-End Learning</h1><h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><blockquote>
+<p><a href="https://www.daconote.com/span-div-difference/">行內元素&amp;區塊元素</a></p>
+</blockquote>
+<h2 id="Css"><a href="#Css" class="headerlink" title="Css"></a>Css</h2><blockquote>
+<p><a href="https://changtsuiling.gitbooks.io/sass/content/chapter1/1-1-shi-me-shi-css-yu-chu-li-qi-ff1f.html">Css 預處理器 Pre-procesor</a><br><a href="https://injerry.pixnet.net/blog/post/38847966#:~:text=%E9%81%B8%E5%8F%96%E5%99%A8%EF%BC%88Selector%EF%BC%89%EF%BC%8C%E4%B9%9F%E6%9C%89,%E9%80%99%E6%A8%A3%E7%BF%BB%E8%AD%AF%E4%B9%9F%E5%B0%8D%E5%95%A6%EF%BC%89">CSS 選擇器 Selector</a><br><a href="https://ithelp.ithome.com.tw/articles/10196454">CSS 權重</a><br><a href="https://www.oxxostudio.tw/articles/202008/css-box-model.html">CSS Box Model</a><br><a href="https://ithelp.ithome.com.tw/articles/10196528?sc=rss.qu">CSS Reset &#x2F; Normalized</a><br><a href="https://www.facebook.com/groups/f2e.tw/permalink/4925715637465762/">網上推的 CSS 面試題目</a></p>
+</blockquote>
+<ol>
+<li>每一個瀏覽器在定義每一個HTML標籤時用的style不一樣，會出現你的應用程式前端在各個瀏覽器顯示出來的結果可能不一樣，所以製作出reset.css，強制讓Browser的基本屬性變為你設定的值，讓不統一的地方一致，缺點是不彈性。所以後續解決這個問題，才多了CSS Normalize去繼承Browser原有的CSS屬性，再去做加法。</li>
+<li>哪種CSS會被蓋掉、哪種CSS權重比較重，在同樣指定的CSS上，哪一個會被套用。簡單來說important&gt;inline-style&gt;id&gt;class&#x3D;attribute&#x3D;psuedo-class&gt;html-element。</li>
+<li>html tags中的box element，由外往內有margin、border、padding和content。</li>
+</ol>
+<blockquote>
+<p><a href="https://w3c.hexschool.com/blog/35afa83f">CSS BEM設計模式</a><br><a href="https://blog.yuyansoftware.com.tw/2022/02/css-cascade-layers-specificity/">CSS Cascade Layers @layer 解決css權重</a><br><a href="https://blog.hiskio.com/tailwind-css-or-bootstrap/">Tailwind css v.s Bootstrap</a></p>
+</blockquote>
+<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><blockquote>
+<p><a href="https://ithelp.ithome.com.tw/articles/10190873">JS 基本中的基本</a><br><a href="https://shawnlin0201.github.io/JavaScript/JavaScript-Automatic-Semicolon-Insertion/">JS Automatic Semicolon</a><br><a href="https://medium.com/helena-chang/js%E4%BA%8C%E9%83%A8%E6%9B%B2-%E7%AB%8B%E5%8D%B3%E5%87%BD%E5%BC%8F-iife-b60bd694bbea">JS IIFE</a><br><a href="https://ithelp.ithome.com.tw/articles/10266627">JS 宣告提升 Hoisting</a><br><a href="https://ithelp.ithome.com.tw/articles/10265819">JS 冒泡事件 Bubble Event</a><br><a href="https://hackmd.io/@Heidi-Liu/note-fe201-dom">JS 冒泡事件&#x2F;事件捕獲 Event Bubbling&#x2F;Event Capturing</a><br><a href="https://pjchender.dev/javascript/js-closure/">JS 閉包 Closure</a><br><a href="https://medium.com/take-a-day-off/js-scope-%E4%BD%9C%E7%94%A8%E5%9F%9F-ee536640963b">JS 作用域 Scope</a><br><a href="https://pjchender.dev/javascript/js-promise/">JS Promise</a><br><a href="https://medium.com/itsems-frontend/javascript-event-loop-event-queue-call-stack-74a02fed5625">JS Event Loop</a><br><a href="https://medium.com/@mengchiang000/js%E5%9F%BA%E6%9C%AC%E8%A7%80%E5%BF%B5-%E5%8E%9F%E5%9E%8B%E9%8F%88-prototype-chain-96c742893795">JS 原型鏈 Prototype Chain</a></p>
+</blockquote>
+<h2 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h2><h2 id="Browser"><a href="#Browser" class="headerlink" title="Browser"></a>Browser</h2><blockquote>
+<p><a href="https://notfalse.net/7/three-way-handshake">TCP 三向交握</a><br><a href="https://ithelp.ithome.com.tw/articles/10250980">Http Methods</a><br><a href="https://ithelp.ithome.com.tw/articles/10238084">CORS</a><br><a href="https://ithelp.ithome.com.tw/articles/10235079">DOM v.s BOM</a><br><a href="https://5xruby.tw/posts/what-is-jwt">JWT JSON Web Token</a><br><a href="https://shubo.io/rendering-patterns/">SSR v.s CSR</a><br><a href="https://medium.com/@bebebobohaha/cookie-localstorage-sessionstorage-%E5%B7%AE%E7%95%B0-9e1d5df3dd7f">LocalStorage v.s SessionStorage v.s Cookie</a><br><a href="https://caniuse.com/">What Can I use?</a><br><a href="https://ikala.cloud/grpc-openapi-and-rest-1/#:~:text=gRPC%20%E6%98%AF%E4%B8%80%E7%A8%AE%E5%AF%A6%E4%BD%9C,%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F%E8%88%87%E6%AD%A4%E7%9B%B8%E5%8F%8D%E3%80%82">REST v.s gRPC v.s OpenAPI</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Frontend</category>
+      </categories>
+      <tags>
+        <tag>Frontend</tag>
+        <tag>Html</tag>
+        <tag>CSS</tag>
+        <tag>Javascript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS挑戰 / CSS練習 / CSS小遊戲</title>
     <url>/blog/2022/11/02/css-challenges-practices-games/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>很多人前端第一個接觸的一定就是Html和CSS，那我第一次也是高中的時候，用著作業系統內建的記事本寫著Html和CSS~XD<br>那時想知道一個新的Html Element或是想套一個新的CSS樣式，都是直接上Google找的，也很少在看書，所以學的算是零零散散的。<br>之前別人問起相關知識時，也說不出個專有名詞或要等他描述後，我才知道，所以就想說網路上，有沒有一些挑戰或是帶入遊戲可以邊學習的網站，除了可以學習到基本知識外，還有一些簡單的解釋，且在最後做完後，還可以用這個網頁來證明說，我有這些技能XD。<br>這篇就是介紹日前找到關於CSS的小挑戰，但其實可以當作一個學習知識的遊戲~~</p>
@@ -70,40 +104,6 @@
       </tags>
   </entry>
   <entry>
-    <title>前端知識區 / 前端面試題</title>
-    <url>/blog/2022/12/16/frontend-knowledge/</url>
-    <content><![CDATA[<h1 id="For-Front-End-Learning"><a href="#For-Front-End-Learning" class="headerlink" title="For Front-End Learning"></a>For Front-End Learning</h1><h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><blockquote>
-<p><a href="https://www.daconote.com/span-div-difference/">行內元素&amp;區塊元素</a></p>
-</blockquote>
-<h2 id="Css"><a href="#Css" class="headerlink" title="Css"></a>Css</h2><blockquote>
-<p><a href="https://changtsuiling.gitbooks.io/sass/content/chapter1/1-1-shi-me-shi-css-yu-chu-li-qi-ff1f.html">Css 預處理器 Pre-procesor</a><br><a href="https://injerry.pixnet.net/blog/post/38847966#:~:text=%E9%81%B8%E5%8F%96%E5%99%A8%EF%BC%88Selector%EF%BC%89%EF%BC%8C%E4%B9%9F%E6%9C%89,%E9%80%99%E6%A8%A3%E7%BF%BB%E8%AD%AF%E4%B9%9F%E5%B0%8D%E5%95%A6%EF%BC%89">CSS 選擇器 Selector</a><br><a href="https://ithelp.ithome.com.tw/articles/10196454">CSS 權重</a><br><a href="https://www.oxxostudio.tw/articles/202008/css-box-model.html">CSS Box Model</a><br><a href="https://ithelp.ithome.com.tw/articles/10196528?sc=rss.qu">CSS Reset &#x2F; Normalized</a><br><a href="https://www.facebook.com/groups/f2e.tw/permalink/4925715637465762/">網上推的 CSS 面試題目</a></p>
-</blockquote>
-<ol>
-<li>每一個瀏覽器在定義每一個HTML標籤時用的style不一樣，會出現你的應用程式前端在各個瀏覽器顯示出來的結果可能不一樣，所以製作出reset.css，強制讓Browser的基本屬性變為你設定的值，讓不統一的地方一致，缺點是不彈性。所以後續解決這個問題，才多了CSS Normalize去繼承Browser原有的CSS屬性，再去做加法。</li>
-<li>哪種CSS會被蓋掉、哪種CSS權重比較重，在同樣指定的CSS上，哪一個會被套用。簡單來說important&gt;inline-style&gt;id&gt;class&#x3D;attribute&#x3D;psuedo-class&gt;html-element。</li>
-<li>html tags中的box element，由外往內有margin、border、padding和content。</li>
-</ol>
-<blockquote>
-<p><a href="https://w3c.hexschool.com/blog/35afa83f">CSS BEM設計模式</a><br><a href="https://blog.yuyansoftware.com.tw/2022/02/css-cascade-layers-specificity/">CSS Cascade Layers @layer 解決css權重</a><br><a href="https://blog.hiskio.com/tailwind-css-or-bootstrap/">Tailwind css v.s Bootstrap</a></p>
-</blockquote>
-<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><blockquote>
-<p><a href="https://ithelp.ithome.com.tw/articles/10190873">JS 基本中的基本</a><br><a href="https://shawnlin0201.github.io/JavaScript/JavaScript-Automatic-Semicolon-Insertion/">JS Automatic Semicolon</a><br><a href="https://medium.com/helena-chang/js%E4%BA%8C%E9%83%A8%E6%9B%B2-%E7%AB%8B%E5%8D%B3%E5%87%BD%E5%BC%8F-iife-b60bd694bbea">JS IIFE</a><br><a href="https://ithelp.ithome.com.tw/articles/10266627">JS 宣告提升 Hoisting</a><br><a href="https://ithelp.ithome.com.tw/articles/10265819">JS 冒泡事件 Bubble Event</a><br><a href="https://hackmd.io/@Heidi-Liu/note-fe201-dom">JS 冒泡事件&#x2F;事件捕獲 Event Bubbling&#x2F;Event Capturing</a><br><a href="https://pjchender.dev/javascript/js-closure/">JS 閉包 Closure</a><br><a href="https://medium.com/take-a-day-off/js-scope-%E4%BD%9C%E7%94%A8%E5%9F%9F-ee536640963b">JS 作用域 Scope</a><br><a href="https://pjchender.dev/javascript/js-promise/">JS Promise</a><br><a href="https://medium.com/itsems-frontend/javascript-event-loop-event-queue-call-stack-74a02fed5625">JS Event Loop</a><br><a href="https://medium.com/@mengchiang000/js%E5%9F%BA%E6%9C%AC%E8%A7%80%E5%BF%B5-%E5%8E%9F%E5%9E%8B%E9%8F%88-prototype-chain-96c742893795">JS 原型鏈 Prototype Chain</a></p>
-</blockquote>
-<h2 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h2><h2 id="Browser"><a href="#Browser" class="headerlink" title="Browser"></a>Browser</h2><blockquote>
-<p><a href="https://notfalse.net/7/three-way-handshake">TCP 三向交握</a><br><a href="https://ithelp.ithome.com.tw/articles/10250980">Http Methods</a><br><a href="https://ithelp.ithome.com.tw/articles/10238084">CORS</a><br><a href="https://ithelp.ithome.com.tw/articles/10235079">DOM v.s BOM</a><br><a href="https://5xruby.tw/posts/what-is-jwt">JWT JSON Web Token</a><br><a href="https://shubo.io/rendering-patterns/">SSR v.s CSR</a><br><a href="https://medium.com/@bebebobohaha/cookie-localstorage-sessionstorage-%E5%B7%AE%E7%95%B0-9e1d5df3dd7f">LocalStorage v.s SessionStorage v.s Cookie</a><br><a href="https://caniuse.com/">What Can I use?</a><br><a href="https://ikala.cloud/grpc-openapi-and-rest-1/#:~:text=gRPC%20%E6%98%AF%E4%B8%80%E7%A8%AE%E5%AF%A6%E4%BD%9C,%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F%E8%88%87%E6%AD%A4%E7%9B%B8%E5%8F%8D%E3%80%82">REST v.s gRPC v.s OpenAPI</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Frontend</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>Frontend</tag>
-        <tag>Html</tag>
-        <tag>Javascript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/blog/2022/10/27/hello-world/</url>
     <content><![CDATA[<p>這是一篇Hexo自動產生的文件<br>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -124,7 +124,14 @@
   <entry>
     <title>Nuxt3介紹</title>
     <url>/blog/2022/12/16/nuxt3-introduction/</url>
-    <content><![CDATA[<h1 id="Nuxt3-簡介"><a href="#Nuxt3-簡介" class="headerlink" title="Nuxt3 簡介"></a>Nuxt3 簡介</h1><h2 id="Description-簡述-："><a href="#Description-簡述-：" class="headerlink" title="Description(簡述)："></a>Description(簡述)：</h2><p>Nuxt3 是以 Vue3 為基礎，用來在單頁應用程式（SPA, Single Page Application）上進行伺服器渲染（SSR, Server Side Render）。專案架構打包工具支援 webpack 5 和 Vite，且使用 Vue-Router 來管理客戶端（Client Side）的路由。但目前版本還在釋出版本候補（RC, Release Candidate），代表還相對不穩定，現階段比較建議使用 Npm、Yarn，其他套件管理程式（Package Manager）的支援度還不夠，例如 PNpM。<br>2022&#x2F;11&#x2F;16，Nuxt3 已經在今天正式釋出<a href="https://github.com/nuxt/framework/discussions/9064">穩定版本</a>！！！</p>
+    <content><![CDATA[<h1 id="Nuxt3-簡介"><a href="#Nuxt3-簡介" class="headerlink" title="Nuxt3 簡介"></a>Nuxt3 簡介</h1><h2 id="Nuxt3-template-x2F-Nuxt3-starter"><a href="#Nuxt3-template-x2F-Nuxt3-starter" class="headerlink" title="Nuxt3 template &#x2F; Nuxt3 starter"></a>Nuxt3 template &#x2F; Nuxt3 starter</h2><h5 id="一個自製的nuxt3-template"><a href="#一個自製的nuxt3-template" class="headerlink" title="一個自製的nuxt3 template"></a><a href="https://github.com/ben890524/nuxt3-template">一個自製的nuxt3 template</a></h5><ul>
+<li>nuxt3 stable</li>
+<li>tailwindcss</li>
+<li>pinia &amp; pinia-plugin-persistedstate</li>
+<li>i18n(@intlify&#x2F;nuxt3) and store in pinia-persist</li>
+<li>simple template for page&#x2F;layout&#x2F;error</li>
+</ul>
+<h2 id="Description-簡述-："><a href="#Description-簡述-：" class="headerlink" title="Description(簡述)："></a>Description(簡述)：</h2><p>Nuxt3 是以 Vue3 為基礎，用來在單頁應用程式（SPA, Single Page Application）上進行伺服器渲染（SSR, Server Side Render）。專案架構打包工具支援 webpack 5 和 Vite，且使用 Vue-Router 來管理客戶端（Client Side）的路由。但目前版本還在釋出版本候補（RC, Release Candidate），代表還相對不穩定，現階段比較建議使用 Npm、Yarn，其他套件管理程式（Package Manager）的支援度還不夠，例如 PNpM。<br>2022&#x2F;11&#x2F;16，Nuxt3 已經在今天正式釋出<a href="https://github.com/nuxt/framework/discussions/9064">穩定版本</a>！！！</p>
 <h3 id="SSR-V-S-CSR"><a href="#SSR-V-S-CSR" class="headerlink" title="SSR V.S CSR"></a>SSR V.S CSR</h3><h4 id="SSR"><a href="#SSR" class="headerlink" title="SSR"></a>SSR</h4><p>HTML 網頁資料會在伺服器端進行編譯，編譯完成才會回傳回客戶端，大多後端 MVC 架構的網頁皆是 SSR。</p>
 <h5 id="優點"><a href="#優點" class="headerlink" title="優點"></a>優點</h5><ul>
 <li>搜尋引擎優化（SEO）的排名更佳。</li>
@@ -145,13 +152,13 @@
 <h4 id="SSR-amp-CSR-總結"><a href="#SSR-amp-CSR-總結" class="headerlink" title="SSR&amp;CSR 總結"></a>SSR&amp;CSR 總結</h4><p>一些內部管理系統，追求效率或是操作平凡的系統就比較推薦使用 CSR；<br>高度需要 SEO 的就推薦使用 SSR，像是媒體平台或是電商平台，這類型的就需要被搜尋引擎搜尋到，就需要 SSR。</p>
 <h3 id="Nuxt-在-SSR-上的運作原理"><a href="#Nuxt-在-SSR-上的運作原理" class="headerlink" title="Nuxt 在 SSR 上的運作原理"></a>Nuxt 在 SSR 上的運作原理</h3><p>因應 SSR，所以 Nuxt 在原理上，就是在 Server Side 先執行過一次後，再 Client Side 再執行一次，第一次的執行比較可以應對 SEO 或是搜尋引擎的爬蟲機器人，第二次就是給一般的使用者做正常的網頁使用。</p>
 <h2 id="用途："><a href="#用途：" class="headerlink" title="用途："></a>用途：</h2><p>將 SPA 和 SSR 的好處結合在一起。在首個屏幕的頁面渲染較快，且支援良好的 SEO，且之後採用客戶端渲染（CSR, Client Side Render）的方式執行。所以常常會被同構、Hybird、混合等等的形容詞形容。</p>
-<h2 id="準備專案"><a href="#準備專案" class="headerlink" title="準備專案"></a>準備專案</h2><h3 id="創建專案"><a href="#創建專案" class="headerlink" title="創建專案"></a>創建專案</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npx nuxi init [nuxt-app]</span><br><span class="line">cd [nuxt-app]</span><br></pre></td></tr></table></figure>
+<h2 id="準備專案"><a href="#準備專案" class="headerlink" title="準備專案"></a>準備專案</h2><h3 id="創建專案"><a href="#創建專案" class="headerlink" title="創建專案"></a>創建專案</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx nuxi init [nuxt-app]</span><br><span class="line"><span class="built_in">cd</span> [nuxt-app]</span><br></pre></td></tr></table></figure>
 
-<p>若途中有詢問你是否要安裝<a href="mailto:&#110;&#x75;&#x78;&#x74;&#64;&#x33;&#46;&#48;&#46;&#x30;&#45;&#114;&#x63;">&#110;&#x75;&#x78;&#x74;&#64;&#x33;&#46;&#48;&#46;&#x30;&#45;&#114;&#x63;</a>.*，請按 Y。</p>
-<h3 id="安裝依賴"><a href="#安裝依賴" class="headerlink" title="安裝依賴"></a>安裝依賴</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>若途中有詢問你是否要安裝<a href="mailto:&#x6e;&#117;&#x78;&#x74;&#x40;&#x33;&#x2e;&#48;&#x2e;&#48;&#45;&#114;&#99;">&#x6e;&#117;&#x78;&#x74;&#x40;&#x33;&#x2e;&#48;&#x2e;&#48;&#45;&#114;&#99;</a>.*，請按 Y。</p>
+<h3 id="安裝依賴"><a href="#安裝依賴" class="headerlink" title="安裝依賴"></a>安裝依賴</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
 <p>推薦使用 Npm、Yarn 套件管理程式，PNpM 現階段要加參數（–shamefully-hoist）才可正常 Install。</p>
-<h3 id="啟動開發伺服器"><a href="#啟動開發伺服器" class="headerlink" title="啟動開發伺服器"></a>啟動開發伺服器</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yarn dev</span><br><span class="line">npm run dev</span><br><span class="line">pnpm dev</span><br></pre></td></tr></table></figure>
+<h3 id="啟動開發伺服器"><a href="#啟動開發伺服器" class="headerlink" title="啟動開發伺服器"></a>啟動開發伺服器</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn dev</span><br><span class="line">npm run dev</span><br><span class="line">pnpm dev</span><br></pre></td></tr></table></figure>
 
 <p>推薦使用 Npm、Yarn 套件管理程式。也可以在<code>package.json</code>新增跟 vue3 一樣的啟動指令！</p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">// In package.json</span></span><br><span class="line"><span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="attr">&quot;serve&quot;</span><span class="punctuation">:</span> <span class="string">&quot;nuxt dev&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
