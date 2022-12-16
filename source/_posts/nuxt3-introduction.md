@@ -13,6 +13,15 @@ cover:
 
 # Nuxt3 簡介
 
+## Nuxt3 template / Nuxt3 starter
+##### [一個自製的nuxt3 template](https://github.com/ben890524/nuxt3-template)
+- nuxt3 stable
+- tailwindcss
+- pinia & pinia-plugin-persistedstate
+- i18n(@intlify/nuxt3) and store in pinia-persist
+- simple template for page/layout/error
+
+
 ## Description(簡述)：
 
 Nuxt3 是以 Vue3 為基礎，用來在單頁應用程式（SPA, Single Page Application）上進行伺服器渲染（SSR, Server Side Render）。專案架構打包工具支援 webpack 5 和 Vite，且使用 Vue-Router 來管理客戶端（Client Side）的路由。但目前版本還在釋出版本候補（RC, Release Candidate），代表還相對不穩定，現階段比較建議使用 Npm、Yarn，其他套件管理程式（Package Manager）的支援度還不夠，例如 PNpM。
@@ -64,7 +73,7 @@ HTML 網頁資料會在伺服器端進行編譯，編譯完成才會回傳回客
 
 ### 創建專案
 
-```
+``` bash
 npx nuxi init [nuxt-app]
 cd [nuxt-app]
 ```
@@ -73,7 +82,7 @@ cd [nuxt-app]
 
 ### 安裝依賴
 
-```
+``` bash
 npm install
 ```
 
@@ -81,7 +90,7 @@ npm install
 
 ### 啟動開發伺服器
 
-```
+```bash
 yarn dev
 npm run dev
 pnpm dev
