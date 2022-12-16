@@ -18,6 +18,7 @@ cover:
 - nuxt3 stable
 - tailwindcss
 - pinia & pinia-plugin-persistedstate
+- i18n(@intlify/nuxt3) and store in pinia-persist
 - simple template for page/layout/error
 
 
