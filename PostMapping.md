@@ -5,3 +5,4 @@ id - post_name
 4 - object-oriented-principles-solid
 5 - nuxt3-introduction
 6 - frontend-knowledge
+7 - vue-google-recaptcha
