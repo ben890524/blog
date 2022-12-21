@@ -24,40 +24,6 @@
       </tags>
   </entry>
   <entry>
-    <title>前端知識區 / 前端面試題</title>
-    <url>/blog/2022/12/16/frontend-knowledge/</url>
-    <content><![CDATA[<h1 id="For-Front-End-Learning"><a href="#For-Front-End-Learning" class="headerlink" title="For Front-End Learning"></a>For Front-End Learning</h1><h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><blockquote>
-<p><a href="https://www.daconote.com/span-div-difference/">行內元素&amp;區塊元素</a></p>
-</blockquote>
-<h2 id="Css"><a href="#Css" class="headerlink" title="Css"></a>Css</h2><blockquote>
-<p><a href="https://changtsuiling.gitbooks.io/sass/content/chapter1/1-1-shi-me-shi-css-yu-chu-li-qi-ff1f.html">Css 預處理器 Pre-procesor</a><br><a href="https://injerry.pixnet.net/blog/post/38847966#:~:text=%E9%81%B8%E5%8F%96%E5%99%A8%EF%BC%88Selector%EF%BC%89%EF%BC%8C%E4%B9%9F%E6%9C%89,%E9%80%99%E6%A8%A3%E7%BF%BB%E8%AD%AF%E4%B9%9F%E5%B0%8D%E5%95%A6%EF%BC%89">CSS 選擇器 Selector</a><br><a href="https://ithelp.ithome.com.tw/articles/10196454">CSS 權重</a><br><a href="https://www.oxxostudio.tw/articles/202008/css-box-model.html">CSS Box Model</a><br><a href="https://ithelp.ithome.com.tw/articles/10196528?sc=rss.qu">CSS Reset &#x2F; Normalized</a><br><a href="https://www.facebook.com/groups/f2e.tw/permalink/4925715637465762/">網上推的 CSS 面試題目</a></p>
-</blockquote>
-<ol>
-<li>每一個瀏覽器在定義每一個HTML標籤時用的style不一樣，會出現你的應用程式前端在各個瀏覽器顯示出來的結果可能不一樣，所以製作出reset.css，強制讓Browser的基本屬性變為你設定的值，讓不統一的地方一致，缺點是不彈性。所以後續解決這個問題，才多了CSS Normalize去繼承Browser原有的CSS屬性，再去做加法。</li>
-<li>哪種CSS會被蓋掉、哪種CSS權重比較重，在同樣指定的CSS上，哪一個會被套用。簡單來說important&gt;inline-style&gt;id&gt;class&#x3D;attribute&#x3D;psuedo-class&gt;html-element。</li>
-<li>html tags中的box element，由外往內有margin、border、padding和content。</li>
-</ol>
-<blockquote>
-<p><a href="https://w3c.hexschool.com/blog/35afa83f">CSS BEM設計模式</a><br><a href="https://blog.yuyansoftware.com.tw/2022/02/css-cascade-layers-specificity/">CSS Cascade Layers @layer 解決css權重</a><br><a href="https://blog.hiskio.com/tailwind-css-or-bootstrap/">Tailwind css v.s Bootstrap</a></p>
-</blockquote>
-<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><blockquote>
-<p><a href="https://ithelp.ithome.com.tw/articles/10190873">JS 基本中的基本</a><br><a href="https://shawnlin0201.github.io/JavaScript/JavaScript-Automatic-Semicolon-Insertion/">JS Automatic Semicolon</a><br><a href="https://medium.com/helena-chang/js%E4%BA%8C%E9%83%A8%E6%9B%B2-%E7%AB%8B%E5%8D%B3%E5%87%BD%E5%BC%8F-iife-b60bd694bbea">JS IIFE</a><br><a href="https://ithelp.ithome.com.tw/articles/10266627">JS 宣告提升 Hoisting</a><br><a href="https://ithelp.ithome.com.tw/articles/10265819">JS 冒泡事件 Bubble Event</a><br><a href="https://hackmd.io/@Heidi-Liu/note-fe201-dom">JS 冒泡事件&#x2F;事件捕獲 Event Bubbling&#x2F;Event Capturing</a><br><a href="https://pjchender.dev/javascript/js-closure/">JS 閉包 Closure</a><br><a href="https://medium.com/take-a-day-off/js-scope-%E4%BD%9C%E7%94%A8%E5%9F%9F-ee536640963b">JS 作用域 Scope</a><br><a href="https://pjchender.dev/javascript/js-promise/">JS Promise</a><br><a href="https://medium.com/itsems-frontend/javascript-event-loop-event-queue-call-stack-74a02fed5625">JS Event Loop</a><br><a href="https://medium.com/@mengchiang000/js%E5%9F%BA%E6%9C%AC%E8%A7%80%E5%BF%B5-%E5%8E%9F%E5%9E%8B%E9%8F%88-prototype-chain-96c742893795">JS 原型鏈 Prototype Chain</a></p>
-</blockquote>
-<h2 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h2><h2 id="Browser"><a href="#Browser" class="headerlink" title="Browser"></a>Browser</h2><blockquote>
-<p><a href="https://notfalse.net/7/three-way-handshake">TCP 三向交握</a><br><a href="https://ithelp.ithome.com.tw/articles/10250980">Http Methods</a><br><a href="https://ithelp.ithome.com.tw/articles/10238084">CORS</a><br><a href="https://ithelp.ithome.com.tw/articles/10235079">DOM v.s BOM</a><br><a href="https://5xruby.tw/posts/what-is-jwt">JWT JSON Web Token</a><br><a href="https://shubo.io/rendering-patterns/">SSR v.s CSR</a><br><a href="https://medium.com/@bebebobohaha/cookie-localstorage-sessionstorage-%E5%B7%AE%E7%95%B0-9e1d5df3dd7f">LocalStorage v.s SessionStorage v.s Cookie</a><br><a href="https://caniuse.com/">What Can I use?</a><br><a href="https://ikala.cloud/grpc-openapi-and-rest-1/#:~:text=gRPC%20%E6%98%AF%E4%B8%80%E7%A8%AE%E5%AF%A6%E4%BD%9C,%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F%E8%88%87%E6%AD%A4%E7%9B%B8%E5%8F%8D%E3%80%82">REST v.s gRPC v.s OpenAPI</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Frontend</category>
-      </categories>
-      <tags>
-        <tag>Frontend</tag>
-        <tag>Html</tag>
-        <tag>CSS</tag>
-        <tag>Javascript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS挑戰 / CSS練習 / CSS小遊戲</title>
     <url>/blog/2022/11/02/css-challenges-practices-games/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>很多人前端第一個接觸的一定就是Html和CSS，那我第一次也是高中的時候，用著作業系統內建的記事本寫著Html和CSS~XD<br>那時想知道一個新的Html Element或是想套一個新的CSS樣式，都是直接上Google找的，也很少在看書，所以學的算是零零散散的。<br>之前別人問起相關知識時，也說不出個專有名詞或要等他描述後，我才知道，所以就想說網路上，有沒有一些挑戰或是帶入遊戲可以邊學習的網站，除了可以學習到基本知識外，還有一些簡單的解釋，且在最後做完後，還可以用這個網頁來證明說，我有這些技能XD。<br>這篇就是介紹日前找到關於CSS的小挑戰，但其實可以當作一個學習知識的遊戲~~</p>
@@ -101,6 +67,40 @@
       <tags>
         <tag>CSS</tag>
         <tag>Challenge</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端知識區 / 前端面試題</title>
+    <url>/blog/2022/12/16/frontend-knowledge/</url>
+    <content><![CDATA[<h1 id="For-Front-End-Learning"><a href="#For-Front-End-Learning" class="headerlink" title="For Front-End Learning"></a>For Front-End Learning</h1><h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><blockquote>
+<p><a href="https://www.daconote.com/span-div-difference/">行內元素&amp;區塊元素</a></p>
+</blockquote>
+<h2 id="Css"><a href="#Css" class="headerlink" title="Css"></a>Css</h2><blockquote>
+<p><a href="https://changtsuiling.gitbooks.io/sass/content/chapter1/1-1-shi-me-shi-css-yu-chu-li-qi-ff1f.html">Css 預處理器 Pre-procesor</a><br><a href="https://injerry.pixnet.net/blog/post/38847966#:~:text=%E9%81%B8%E5%8F%96%E5%99%A8%EF%BC%88Selector%EF%BC%89%EF%BC%8C%E4%B9%9F%E6%9C%89,%E9%80%99%E6%A8%A3%E7%BF%BB%E8%AD%AF%E4%B9%9F%E5%B0%8D%E5%95%A6%EF%BC%89">CSS 選擇器 Selector</a><br><a href="https://ithelp.ithome.com.tw/articles/10196454">CSS 權重</a><br><a href="https://www.oxxostudio.tw/articles/202008/css-box-model.html">CSS Box Model</a><br><a href="https://ithelp.ithome.com.tw/articles/10196528?sc=rss.qu">CSS Reset &#x2F; Normalized</a><br><a href="https://www.facebook.com/groups/f2e.tw/permalink/4925715637465762/">網上推的 CSS 面試題目</a></p>
+</blockquote>
+<ol>
+<li>每一個瀏覽器在定義每一個HTML標籤時用的style不一樣，會出現你的應用程式前端在各個瀏覽器顯示出來的結果可能不一樣，所以製作出reset.css，強制讓Browser的基本屬性變為你設定的值，讓不統一的地方一致，缺點是不彈性。所以後續解決這個問題，才多了CSS Normalize去繼承Browser原有的CSS屬性，再去做加法。</li>
+<li>哪種CSS會被蓋掉、哪種CSS權重比較重，在同樣指定的CSS上，哪一個會被套用。簡單來說important&gt;inline-style&gt;id&gt;class&#x3D;attribute&#x3D;psuedo-class&gt;html-element。</li>
+<li>html tags中的box element，由外往內有margin、border、padding和content。</li>
+</ol>
+<blockquote>
+<p><a href="https://w3c.hexschool.com/blog/35afa83f">CSS BEM設計模式</a><br><a href="https://blog.yuyansoftware.com.tw/2022/02/css-cascade-layers-specificity/">CSS Cascade Layers @layer 解決css權重</a><br><a href="https://blog.hiskio.com/tailwind-css-or-bootstrap/">Tailwind css v.s Bootstrap</a></p>
+</blockquote>
+<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><blockquote>
+<p><a href="https://ithelp.ithome.com.tw/articles/10190873">JS 基本中的基本</a><br><a href="https://shawnlin0201.github.io/JavaScript/JavaScript-Automatic-Semicolon-Insertion/">JS Automatic Semicolon</a><br><a href="https://medium.com/helena-chang/js%E4%BA%8C%E9%83%A8%E6%9B%B2-%E7%AB%8B%E5%8D%B3%E5%87%BD%E5%BC%8F-iife-b60bd694bbea">JS IIFE</a><br><a href="https://ithelp.ithome.com.tw/articles/10266627">JS 宣告提升 Hoisting</a><br><a href="https://ithelp.ithome.com.tw/articles/10265819">JS 冒泡事件 Bubble Event</a><br><a href="https://hackmd.io/@Heidi-Liu/note-fe201-dom">JS 冒泡事件&#x2F;事件捕獲 Event Bubbling&#x2F;Event Capturing</a><br><a href="https://pjchender.dev/javascript/js-closure/">JS 閉包 Closure</a><br><a href="https://medium.com/take-a-day-off/js-scope-%E4%BD%9C%E7%94%A8%E5%9F%9F-ee536640963b">JS 作用域 Scope</a><br><a href="https://pjchender.dev/javascript/js-promise/">JS Promise</a><br><a href="https://medium.com/itsems-frontend/javascript-event-loop-event-queue-call-stack-74a02fed5625">JS Event Loop</a><br><a href="https://medium.com/@mengchiang000/js%E5%9F%BA%E6%9C%AC%E8%A7%80%E5%BF%B5-%E5%8E%9F%E5%9E%8B%E9%8F%88-prototype-chain-96c742893795">JS 原型鏈 Prototype Chain</a></p>
+</blockquote>
+<h2 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h2><h2 id="Browser"><a href="#Browser" class="headerlink" title="Browser"></a>Browser</h2><blockquote>
+<p><a href="https://notfalse.net/7/three-way-handshake">TCP 三向交握</a><br><a href="https://ithelp.ithome.com.tw/articles/10250980">Http Methods</a><br><a href="https://ithelp.ithome.com.tw/articles/10238084">CORS</a><br><a href="https://ithelp.ithome.com.tw/articles/10235079">DOM v.s BOM</a><br><a href="https://5xruby.tw/posts/what-is-jwt">JWT JSON Web Token</a><br><a href="https://shubo.io/rendering-patterns/">SSR v.s CSR</a><br><a href="https://medium.com/@bebebobohaha/cookie-localstorage-sessionstorage-%E5%B7%AE%E7%95%B0-9e1d5df3dd7f">LocalStorage v.s SessionStorage v.s Cookie</a><br><a href="https://caniuse.com/">What Can I use?</a><br><a href="https://ikala.cloud/grpc-openapi-and-rest-1/#:~:text=gRPC%20%E6%98%AF%E4%B8%80%E7%A8%AE%E5%AF%A6%E4%BD%9C,%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F%E8%88%87%E6%AD%A4%E7%9B%B8%E5%8F%8D%E3%80%82">REST v.s gRPC v.s OpenAPI</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Frontend</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>Frontend</tag>
+        <tag>Html</tag>
+        <tag>Javascript</tag>
       </tags>
   </entry>
   <entry>
@@ -154,7 +154,7 @@
 <h2 id="用途："><a href="#用途：" class="headerlink" title="用途："></a>用途：</h2><p>將 SPA 和 SSR 的好處結合在一起。在首個屏幕的頁面渲染較快，且支援良好的 SEO，且之後採用客戶端渲染（CSR, Client Side Render）的方式執行。所以常常會被同構、Hybird、混合等等的形容詞形容。</p>
 <h2 id="準備專案"><a href="#準備專案" class="headerlink" title="準備專案"></a>準備專案</h2><h3 id="創建專案"><a href="#創建專案" class="headerlink" title="創建專案"></a>創建專案</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx nuxi init [nuxt-app]</span><br><span class="line"><span class="built_in">cd</span> [nuxt-app]</span><br></pre></td></tr></table></figure>
 
-<p>若途中有詢問你是否要安裝<a href="mailto:&#x6e;&#117;&#x78;&#x74;&#x40;&#x33;&#x2e;&#48;&#x2e;&#48;&#45;&#114;&#99;">&#x6e;&#117;&#x78;&#x74;&#x40;&#x33;&#x2e;&#48;&#x2e;&#48;&#45;&#114;&#99;</a>.*，請按 Y。</p>
+<p>若途中有詢問你是否要安裝<a href="mailto:&#x6e;&#x75;&#120;&#116;&#64;&#x33;&#x2e;&#48;&#46;&#48;&#45;&#114;&#99;">&#x6e;&#x75;&#120;&#116;&#64;&#x33;&#x2e;&#48;&#46;&#48;&#45;&#114;&#99;</a>.*，請按 Y。</p>
 <h3 id="安裝依賴"><a href="#安裝依賴" class="headerlink" title="安裝依賴"></a>安裝依賴</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
 <p>推薦使用 Npm、Yarn 套件管理程式，PNpM 現階段要加參數（–shamefully-hoist）才可正常 Install。</p>
@@ -365,6 +365,107 @@
       <tags>
         <tag>Object Oriented</tag>
         <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue 實作 Google reCAPTCHA / Google 非機器人驗證</title>
+    <url>/blog/2022/12/21/vue-google-recaptcha/</url>
+    <content><![CDATA[<h1 id="Vue-實作-Google-reCAPTCHA-x2F-Google-非機器人驗證"><a href="#Vue-實作-Google-reCAPTCHA-x2F-Google-非機器人驗證" class="headerlink" title="Vue 實作 Google reCAPTCHA &#x2F; Google 非機器人驗證"></a>Vue 實作 Google reCAPTCHA &#x2F; Google 非機器人驗證</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因為工作上的需要，所以要來研究 Google reCAPTCHA，公司是用 Vue，所以會來用 Vue 來實做看看，後續看看能不能整合進去公司的 Nuxt3 的前台。<del>最下面有本次實作的範例檔案，有需要可以直接取 XD</del></p>
+<h2 id="Google-reCAPTCHA"><a href="#Google-reCAPTCHA" class="headerlink" title="Google reCAPTCHA"></a>Google reCAPTCHA</h2><p>因為網站安全性問題，或是要防止機器人來到你的網站，佔用你的伺服器空間，所以很多網站都會連接 Google reCAPTCHA，來讓 Google 幫你檢驗，當前使用者是不是機器人~<br>這功能應該很常見，想必大家一定有看過一個勾勾旁邊是我不是機器人，或是一個九宮格請你選取題目指示的圖片，這些都是 Google reCAPTCHA 的實作。<br>Google reCAPTCHA 主要有以下幾種：</p>
+<ol>
+<li>google reCAPTCHA v2<ul>
+<li><img src="/blog/images/vue-google-recaptcha/post_content_img_1.png"></li>
+<li>會有一個核取框，問你是不是機器人，在 google 的檢查機制下如果覺得你是機器人，就會出現九宮格選取框，再來依照題目的要求選取即可。</li>
+</ul>
+</li>
+<li>google reCAPTCHA v3<ul>
+<li>全在背景執行，google 會給當前使用者進行評分，從 0.0~1.0，開發者可以自行決定，多少分以下視為機器人！</li>
+</ul>
+</li>
+<li>google reCAPTCHA 企業版<ul>
+<li>目前據了解，會有更多管理上的功能，且也不會有驗證次數上的限制，因為<strong>reCAPTCHA v2 v3 有每個月一百萬次</strong>的上限！</li>
+</ul>
+</li>
+</ol>
+<h2 id="註冊-Google-reCAPTCHA"><a href="#註冊-Google-reCAPTCHA" class="headerlink" title="註冊 Google reCAPTCHA"></a>註冊 Google reCAPTCHA</h2><p>先到<a href="https://www.google.com/recaptcha/about/">Google reCAPTCHA</a>，選取紅色框框的<code>v3 Admin Console</code>。</p>
+<p><img src="/blog/images/vue-google-recaptcha/post_content_img_2.png"></p>
+<p>接下來填入一些基本的資料進行註冊吧！有幾點可以注意：</p>
+<ul>
+<li>reCAPTCHA v2 v3 依自己的需求使用，如果都需要則要分為兩個進行創立</li>
+<li>網站可以填入 127.0.0.1 和 localhost，如有需要可以填自己區網的 ip</li>
+</ul>
+<p><img src="/blog/images/vue-google-recaptcha/post_content_img_3.png"></p>
+<p>提交後，就可以看到金鑰了，可以不用複製，後續進到 Google reCAPTCHA 的站台還是可以看到~在前端(Vue)會使用到的都只會是<code>網站金鑰</code>！</p>
+<p><img src="/blog/images/vue-google-recaptcha/post_content_img_4.png"></p>
+<p>那 Google reCAPTCHA 的註冊前置的部分就到這邊，可以去準備 Vue 的環境了，這邊 reCAPTCHA v2 v3 都會實作，所以要去註冊兩個~~~</p>
+<p><img src="/blog/images/vue-google-recaptcha/post_content_img_5.png"></p>
+<h2 id="建立-Vue-專案"><a href="#建立-Vue-專案" class="headerlink" title="建立 Vue 專案"></a>建立 Vue 專案</h2><p>那現在就先簡單的建立 Vue3 Template：</p>
+<ul>
+<li>使用 Vue3</li>
+<li>Vite</li>
+<li>Typescript</li>
+</ul>
+<p>可以使用你喜歡的套件管理器，以下範例皆使用 pnpm。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pnpm create vite@latest vue3-recaptcha -- --template vue-ts</span><br><span class="line"><span class="built_in">cd</span> vue3-recaptcha-example</span><br><span class="line">pnpm install</span><br><span class="line">pnpm run dev</span><br></pre></td></tr></table></figure>
+
+<p>先檢測看看是否能正常啟動~</p>
+<h2 id="實作-reCAPTCHA-v2"><a href="#實作-reCAPTCHA-v2" class="headerlink" title="實作 reCAPTCHA v2"></a>實作 reCAPTCHA v2</h2><p>可以正常啟動後，先下載套件<a href="https://www.npmjs.com/package/vue3-recaptcha2">vue3-recaptcha2</a>：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pnpm install vue3-recaptcha2</span><br></pre></td></tr></table></figure>
+
+<p>然後建立 GoogleReCaptchaV2.vue 進行 import，這邊簡單的建立，可以依需求 import 在各個地方！</p>
+<p><img src="/blog/images/vue-google-recaptcha/post_content_img_6.png"></p>
+<p>接下來來實作 GoogleReCaptchaV2.vue：<br>我習慣將相關的方法用類似物件的方式封裝關聯起來：</p>
+<figure class="highlight typescript"><figcaption><span>GoogleReCaptchaV2.vue</span></figcaption><table><tr><td class="code"><pre><span class="line">&lt;script setup lang=<span class="string">&quot;ts&quot;</span>&gt;</span><br><span class="line"><span class="keyword">import</span> &#123; reactive &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> vueRecaptcha <span class="keyword">from</span> <span class="string">&#x27;vue3-recaptcha2&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> instance_vueRecaptchaV2 = <span class="title function_">reactive</span>(&#123;</span><br><span class="line">  <span class="comment">// 請換成你註冊的 SiteKey</span></span><br><span class="line">  <span class="comment">// Please change to your SiteKey.</span></span><br><span class="line">  <span class="attr">data_v2SiteKey</span>: <span class="string">&#x27;*****************************&#x27;</span>,</span><br><span class="line">  <span class="attr">recaptchaVerified</span>: <span class="function">(<span class="params">response_token: <span class="built_in">string</span></span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(response_token);</span><br><span class="line">    <span class="comment">// 連接後端API，給後端進行認證</span></span><br><span class="line">    <span class="comment">// Connect to your Backend service.</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">recaptchaExpired</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 驗證過期後進行的動作</span></span><br><span class="line">    <span class="comment">// After recaptcha is expired, the action you can do.</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;驗證過期啦QAQ&#x27;</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">recaptchaFailed</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 驗證失敗進行的動作</span></span><br><span class="line">    <span class="comment">// After recaptcha is failed, the action you can do.</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><figcaption><span>GoogleReCaptchaV2.vue</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">vue-recaptcha</span></span></span><br><span class="line"><span class="tag">    <span class="attr">:sitekey</span>=<span class="string">&quot;instance_vueRecaptchaV2.data_v2SiteKey&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">size</span>=<span class="string">&quot;normal&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">theme</span>=<span class="string">&quot;light&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">hl</span>=<span class="string">&quot;zh-TW&quot;</span></span></span><br><span class="line"><span class="tag">    @<span class="attr">verify</span>=<span class="string">&quot;instance_vueRecaptchaV2.recaptchaVerified&quot;</span></span></span><br><span class="line"><span class="tag">    @<span class="attr">expire</span>=<span class="string">&quot;instance_vueRecaptchaV2.recaptchaExpired&quot;</span></span></span><br><span class="line"><span class="tag">    @<span class="attr">fail</span>=<span class="string">&quot;instance_vueRecaptchaV2.recaptchaFailed&quot;</span></span></span><br><span class="line"><span class="tag">  /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>接下來在頁面上就可以看到，目前沒有調整樣式，可以依照需求去調整~<br>可以在 Component 階段用一個 div 包著，import 後進行排版！</p>
+<p><img src="/blog/images/vue-google-recaptcha/post_content_img_7.png"></p>
+<p>可以簡單測試看看，點擊我不是機器人後，核取筐會打勾，且在開發人員的 Console 也有印出這次 reCAPTCHA 的 Token，再去連接後端進行認證即可~</p>
+<p><img src="/blog/images/vue-google-recaptcha/post_content_img_8.png"></p>
+<p>當驗證過期時，功能也都正常，就可以依照需求進行操作啦！</p>
+<p><img src="/blog/images/vue-google-recaptcha/post_content_img_9.png"></p>
+<p>那到這邊，就已經完成了 Google reCAPTCHA v2 的 Vue 實作了！</p>
+<h2 id="實作-reCAPTCHA-v3"><a href="#實作-reCAPTCHA-v3" class="headerlink" title="實作 reCAPTCHA v3"></a>實作 reCAPTCHA v3</h2><p>接下來要實作 reCAPTCHA v3，先下載套件<a href="https://www.npmjs.com/package/vue-recaptcha-v3">vue-recaptcha-v3</a>：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pnpm install vue-recaptcha-v3</span><br></pre></td></tr></table></figure>
+
+<p>再來到 main.ts 對 vue-recaptcha-v3 進行註冊，其中<a href="https://github.com/AurityLab/recaptcha-v3/#load-options-usage">loaderOptions</a>可以在 vue-recaptcha-v3 套件說明這邊依照自己的需求選取。</p>
+<figure class="highlight typescript"><figcaption><span>main.ts</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./style.css&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">VueReCaptcha</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-recaptcha-v3&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(<span class="title class_">App</span>);</span><br><span class="line">app.<span class="title function_">use</span>(<span class="title class_">VueReCaptcha</span>, &#123;</span><br><span class="line">  <span class="comment">// 請換成你註冊的 SiteKey</span></span><br><span class="line">  <span class="comment">// Please change to your SiteKey.</span></span><br><span class="line">  <span class="attr">siteKey</span>: <span class="string">&#x27;*****************************&#x27;</span>,</span><br><span class="line">  <span class="attr">loaderOptions</span>: &#123;</span><br><span class="line">    <span class="attr">useRecaptchaNet</span>: <span class="literal">true</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br><span class="line">app.<span class="title function_">mount</span>(<span class="string">&#x27;#app&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>進行註冊完後，你就可以發現在畫面右下角有 Google reCAPTCHA v3 的圖標，這個圖標也可以用 Css style 強制隱藏。</p>
+<p><img src="/blog/images/vue-google-recaptcha/post_content_img_10.png"></p>
+<p>但如果你是<strong>使用 TypeScript+Vue3 的 OptionApi</strong>，就需要在 src 檔案目錄下新增<code>shims-vue-recaptcha-v3.d.ts</code>，才可以正常使用，如果是<strong>CompositionApi 則可以跳過</strong>！</p>
+<figure class="highlight typescript"><figcaption><span>shims-vue-recaptcha-v3.d.ts</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">ReCaptchaInstance</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;recaptcha-v3&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">declare</span> <span class="variable language_">module</span> <span class="string">&#x27;@vue/runtime-core&#x27;</span> &#123;</span><br><span class="line">  <span class="keyword">interface</span> <span class="title class_">ComponentCustomProperties</span> &#123;</span><br><span class="line">    <span class="attr">$recaptcha</span>: <span class="function">(<span class="params">action: <span class="built_in">string</span></span>) =&gt;</span> <span class="title class_">Promise</span>&lt;<span class="built_in">string</span>&gt;</span><br><span class="line">    <span class="attr">$recaptchaLoaded</span>: <span class="function">() =&gt;</span> <span class="title class_">Promise</span>&lt;<span class="built_in">boolean</span>&gt;</span><br><span class="line">    <span class="attr">$recaptchaInstance</span>: <span class="title class_">ReCaptchaInstance</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接著建立 GoogleReCaptchaV3.vue 進行 import，可以依需求 import 在各個地方！但這邊比較要注意的是 reCAPTCHA v3 主要是使用者在進行某一個事件時觸發，像是登入或是註冊發送表單的時候進行，這邊先以 Button 當作觸發條件！</p>
+<figure class="highlight typescript"><figcaption><span>GoogleReCaptchaV3.vue</span></figcaption><table><tr><td class="code"><pre><span class="line">&lt;script setup lang=<span class="string">&quot;ts&quot;</span>&gt;</span><br><span class="line"><span class="keyword">import</span> &#123; reactive &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; useReCaptcha &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-recaptcha-v3&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> &#123; executeRecaptcha, recaptchaLoaded &#125; = <span class="title function_">useReCaptcha</span>()!;</span><br><span class="line"><span class="keyword">const</span> instance_vueRecaptchaV3 = <span class="title function_">reactive</span>(&#123;</span><br><span class="line">  <span class="attr">executeRecaptcha</span>: <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="comment">// (可選) 等待直到 recaptcha 載入完成</span></span><br><span class="line">    <span class="keyword">await</span> <span class="title function_">recaptchaLoaded</span>();</span><br><span class="line">    <span class="comment">// 執行 &quot;login&quot; 狀態的 reCAPTCHA</span></span><br><span class="line">    <span class="keyword">const</span> token = <span class="keyword">await</span> <span class="title function_">executeRecaptcha</span>(<span class="string">&#x27;login&#x27;</span>);</span><br><span class="line">    <span class="comment">// 後續傳給後端進行認證</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(token);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><figcaption><span>GoogleReCaptchaV3.vue</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;v3-margin&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span></span></span><br><span class="line"><span class="tag">    @<span class="attr">click</span>=<span class="string">&quot;instance_vueRecaptchaV3.executeRecaptcha&quot;</span></span></span><br><span class="line"><span class="tag">    &gt;</span></span><br><span class="line">        Submit to active reCAPTCHA</span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span> <span class="attr">lang</span>=<span class="string">&quot;css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-class">.v3-margin</span> &#123;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">margin-top</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>並在需要的地方進行 import：</p>
+<p><img src="/blog/images/vue-google-recaptcha/post_content_img_11.png"></p>
+<p>在畫面上就可以看到觸發 reCAPTCHA 的 Button，按下去也可以觸發功能：</p>
+<p><img src="/blog/images/vue-google-recaptcha/post_content_img_12.png"></p>
+<p>那由於<a href="https://www.npmjs.com/package/vue-recaptcha-v3">vue-recaptcha-v3</a>，提供的方式是使用<strong>provide&#x2F;inject</strong>的方式進行註冊，所以所有<strong>有關套件的操作都要在 vue 的 setup 狀態</strong>進行。<br>但依照上面的範例，所有狀態觸發都綁定在 Button 上面觸發，相對不彈性，所以將它額外移出去，到新建立的 Composable 去實作。我這邊想到的方法是建立 Composable：useReCaptchaV3.ts，提供一個方法，當要使用發法的時候，傳 vue-recaptcha-v3 的實例(Instance)進去即可，相關實作如下：<br>建立 useReCaptchaV3.ts，並實作：</p>
+<figure class="highlight typescript"><figcaption><span>useReCaptchaV3.ts</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">IReCaptchaComposition</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-recaptcha-v3&#x27;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">useReCaptchaV3</span>(<span class="params">useReCaptcha: IReCaptchaComposition</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; executeRecaptcha, recaptchaLoaded &#125; = useReCaptcha;</span><br><span class="line">  <span class="comment">// (可選) 等待直到 recaptcha 載入完成</span></span><br><span class="line">  <span class="comment">// (optional) Wait until recaptcha has been loaded.</span></span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">recaptchaLoaded</span>();</span><br><span class="line">  <span class="comment">// 執行 &quot;login&quot; 狀態的 reCAPTCHA</span></span><br><span class="line">  <span class="comment">// Execute reCAPTCHA with action &quot;login&quot;.</span></span><br><span class="line">  <span class="keyword">const</span> token = <span class="keyword">await</span> <span class="title function_">executeRecaptcha</span>(<span class="string">&#x27;login&#x27;</span>);</span><br><span class="line">  <span class="comment">// 後續傳給後端進行認證</span></span><br><span class="line">  <span class="comment">// Do stuff with the received token.</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(token);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在需要用到 reCAPTCHA v3 的地方進行引入：</p>
+<figure class="highlight typescript"><figcaption><span>GoogleReCaptchaV3.vue</span></figcaption><table><tr><td class="code"><pre><span class="line">&lt;script setup lang=<span class="string">&quot;ts&quot;</span>&gt;</span><br><span class="line"><span class="keyword">import</span> &#123; useReCaptcha &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-recaptcha-v3&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; useReCaptchaV3 &#125; <span class="keyword">from</span> <span class="string">&#x27;../composables/useReCaptchaV3&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> useReCaptchaInstance = <span class="title function_">useReCaptcha</span>()!;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><figcaption><span>GoogleReCaptchaV3.vue</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;v3-margin&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span></span></span><br><span class="line"><span class="tag">    @<span class="attr">click</span>=<span class="string">&quot;useReCaptchaV3(useReCaptchaInstance)&quot;</span>&gt;</span></span><br><span class="line">        Submit to active reCAPTCHA</span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span> <span class="attr">lang</span>=<span class="string">&quot;css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-class">.v3-margin</span> &#123;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">margin-top</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>這樣一樣可以完成觸發，且更彈性、靈活，可以在各處依照需求引入！</p>
+<p><img src="/blog/images/vue-google-recaptcha/post_content_img_13.png"></p>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>那到目前為止，就完成了 Google reCAPTCHA v2 v3 的實作了，在依照跟後端的溝通進行驗證即可~沒有遇到什麼困難，算是很好接的 Google Api 了 XD</p>
+<p>那這邊附上實作的範例檔案：<a href="https://github.com/ben890524/vue3-recaptcha-example">vue3-recaptcha-example</a>。</p>
+<h6 id="tags-Vue-Google-reCAPTCHA"><a href="#tags-Vue-Google-reCAPTCHA" class="headerlink" title="tags: Vue Google reCAPTCHA"></a>tags: <code>Vue</code> <code>Google reCAPTCHA</code></h6>]]></content>
+      <categories>
+        <category>Frontend</category>
+      </categories>
+      <tags>
+        <tag>Frontend</tag>
+        <tag>Vue</tag>
+        <tag>Google reCAPTCHA</tag>
       </tags>
   </entry>
 </search>
