@@ -7,7 +7,7 @@ tags:
 categories:
   - Nuxt3
 top_img: /images/default_banner.png
-cover:
+cover: /images/nuxt3-introduction/cover.png
 # id: post-5
 ---
 
