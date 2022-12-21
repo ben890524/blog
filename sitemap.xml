@@ -11,24 +11,6 @@
   </url>
   
   <url>
-    <loc>https://ben890524.github.io/blog/2022/12/16/nuxt3-introduction/</loc>
-    
-    <lastmod>2022-12-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ben890524.github.io/blog/2022/11/04/object-oriented-features-concepts/</loc>
-    
-    <lastmod>2022-12-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ben890524.github.io/blog/2022/11/04/object-oriented-principles-solid/</loc>
     
     <lastmod>2022-12-21</lastmod>
@@ -102,6 +84,24 @@
   
   <url>
     <loc>https://ben890524.github.io/blog/2022/10/27/hello-world/</loc>
+    
+    <lastmod>2022-12-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ben890524.github.io/blog/2022/12/16/nuxt3-introduction/</loc>
+    
+    <lastmod>2022-12-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ben890524.github.io/blog/2022/11/04/object-oriented-features-concepts/</loc>
     
     <lastmod>2022-12-21</lastmod>
     

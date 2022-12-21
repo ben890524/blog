@@ -154,7 +154,7 @@
 <h2 id="用途："><a href="#用途：" class="headerlink" title="用途："></a>用途：</h2><p>將 SPA 和 SSR 的好處結合在一起。在首個屏幕的頁面渲染較快，且支援良好的 SEO，且之後採用客戶端渲染（CSR, Client Side Render）的方式執行。所以常常會被同構、Hybird、混合等等的形容詞形容。</p>
 <h2 id="準備專案"><a href="#準備專案" class="headerlink" title="準備專案"></a>準備專案</h2><h3 id="創建專案"><a href="#創建專案" class="headerlink" title="創建專案"></a>創建專案</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx nuxi init [nuxt-app]</span><br><span class="line"><span class="built_in">cd</span> [nuxt-app]</span><br></pre></td></tr></table></figure>
 
-<p>若途中有詢問你是否要安裝<a href="mailto:&#x6e;&#x75;&#120;&#116;&#64;&#x33;&#x2e;&#48;&#46;&#48;&#45;&#114;&#99;">&#x6e;&#x75;&#120;&#116;&#64;&#x33;&#x2e;&#48;&#46;&#48;&#45;&#114;&#99;</a>.*，請按 Y。</p>
+<p>若途中有詢問你是否要安裝<a href="mailto:&#x6e;&#x75;&#120;&#116;&#64;&#x33;&#x2e;&#x30;&#46;&#48;&#45;&#114;&#99;">&#x6e;&#x75;&#120;&#116;&#64;&#x33;&#x2e;&#x30;&#46;&#48;&#45;&#114;&#99;</a>.*，請按 Y。</p>
 <h3 id="安裝依賴"><a href="#安裝依賴" class="headerlink" title="安裝依賴"></a>安裝依賴</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
 <p>推薦使用 Npm、Yarn 套件管理程式，PNpM 現階段要加參數（–shamefully-hoist）才可正常 Install。</p>
