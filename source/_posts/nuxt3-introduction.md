@@ -1,6 +1,7 @@
 ---
 title: Nuxt3介紹
 date: 2022-12-16 11:02:37
+keywords: frontend, nuxt, nuxt3, nuxt introduction, nuxt3 introduction, nuxt簡介, nuxt3簡介, nuxt3 簡介, nuxt3 介紹, nuxt3介紹, nuxt介紹
 tags:
   - Nuxt3
   - Vue

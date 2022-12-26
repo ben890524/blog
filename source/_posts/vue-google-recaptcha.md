@@ -1,5 +1,6 @@
 ---
 title: Vue 實作 Google reCAPTCHA / Google 非機器人驗證
+keywords: vue, vue3, google reCAPTCHA, vue google reCAPTCHA, vue3 google reCAPTCHA, vue google reCAPTCHA v2, vue google reCAPTCHA v3, vue3 google reCAPTCHA v2, vue3 google reCAPTCHA v3, Vue 實作 Google reCAPTCHA, Vue3 實作 Google reCAPTCHA, vue Google 非機器人驗證, vue3 Google 非機器人驗證
 date: 2022-12-21 13:58:25
 tags:
   - Frontend

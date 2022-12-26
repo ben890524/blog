@@ -1,5 +1,6 @@
 ---
 title: 物件導向 特性 - 物件導向四大特性
+keywords: object oriented, 物件導向, 物件導向特性, 四大, 特性, 物件, 物件導向四大特性
 date: 2022-11-04 12:57:45
 tags:
 - Object Oriented
