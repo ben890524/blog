@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>創建你Github帳號上的自我介紹（Profile Repositoey）</title>
+    <title>創建你Github帳號上的自我介紹（Profile Repository）</title>
     <url>/blog/2022/10/30/create-github-profile-repository/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果有在做開發或是軟體的研究，或是研究開放的Lib，都會有接觸到版控這件事吧！<br>那你可能就有Github帳號，如果有做一些公開的Repository，你的Github帳號有機會被別人看到。<br>在你的帳號頁面(<code>https://github.com/你的帳號</code>)，就可以填入你自己的簡單個人資料。<br>但如果想要分享更多資訊給別人知道該怎麼做呢？</p>
-<p>Github有提供一個特別的Repository給每個帳號，讓使用者可以自訂想要分享的資訊給大家看到。那這個Repository就是在自己帳號下創建一個跟帳號名字一樣的Repository。<br>例如：我的Github是ben890524，那我的Profile Repository就會是<code>ben890524/ben890524</code>。<br>那接下來就會有簡單的圖文來新增你自己的Profile Repository！</p>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果有在做開發或是軟體的研究，或是研究開放的 Lib，都會有接觸到版控這件事吧！<br>那你可能就有 Github 帳號，如果有做一些公開的 Repository，你的 Github 帳號有機會被別人看到。<br>在你的帳號頁面(<code>https://github.com/你的帳號</code>)，就可以填入你自己的簡單個人資料。<br>但如果想要分享更多資訊給別人知道該怎麼做呢？</p>
+<p>Github 有提供一個特別的 Repository 給每個帳號，讓使用者可以自訂想要分享的資訊給大家看到。那這個 Repository 就是在自己帳號下創建一個跟帳號名字一樣的 Repository。<br>例如：我的 Github 是 ben890524，那我的 Profile Repository 就會是<code>ben890524/ben890524</code>。<br>那接下來就會有簡單的圖文來新增你自己的 Profile Repository！</p>
 <h2 id="新增流程"><a href="#新增流程" class="headerlink" title="新增流程"></a>新增流程</h2><h3 id="步驟一"><a href="#步驟一" class="headerlink" title="步驟一"></a>步驟一</h3><p>首先先到<a href="https://github.com/">Github</a>然後登入你的帳號。</p>
-<h3 id="步驟二"><a href="#步驟二" class="headerlink" title="步驟二"></a>步驟二</h3><p>目標是新增一個新的Repository，所以點擊圖片中New的按鈕來新增新的！<br><img src="/blog/images/create-github-profile-repository/post_content_img_1.png"></p>
-<h3 id="步驟三"><a href="#步驟三" class="headerlink" title="步驟三"></a>步驟三</h3><p>進入到新增Repository的設定中。<br><img src="/blog/images/create-github-profile-repository/post_content_img_2.png"><br>在<code>Repository name</code>那邊填入你的Github帳號名稱，填入後Github也會提醒你，這是一個很特別的Repository，讓你可以新增一個自己的Profile README！<br>簡單做個Description，且<strong>請記得要選公開（public）和初始化Repository時要新增一個README檔案（README.md）！</strong><br>最後就可以到最下面完成創建Repository了！</p>
-<h3 id="步驟四"><a href="#步驟四" class="headerlink" title="步驟四"></a>步驟四</h3><p>要開始編輯自己的Profile了，移動到<code>你的帳號名稱/你的帳號名稱</code>下的<code>README.md</code>。<br><img src="/blog/images/create-github-profile-repository/post_content_img_3.png"><br>按下編輯鍵（一枝筆的Icon），就可以編輯專屬於你的Profile介紹了！</p>
-<h3 id="步驟五"><a href="#步驟五" class="headerlink" title="步驟五"></a>步驟五</h3><p>最後等你編輯完成後，<strong>記得將你編輯的改變Commit上去Github的Repository上</strong>！<br>接下來你就可以到帳號頁面(<code>https://github.com/你的帳號</code>)看成果啦~<br><img src="/blog/images/create-github-profile-repository/post_content_img_4.png"></p>
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>這是一個讓大家認識你的一個好機會，但前提也是你的Github要有曝光度XD<br>如果不喜歡Online的MarkDown編輯器的話也可以將Repository Clone下來，再本地端進行編輯~<br>也可以用其他線上的軟體撰寫好後，再貼上進行更動~</p>
+<h3 id="步驟二"><a href="#步驟二" class="headerlink" title="步驟二"></a>步驟二</h3><p>目標是新增一個新的 Repository，所以點擊圖片中 New 的按鈕來新增新的！<br><img src="/blog/images/create-github-profile-repository/post_content_img_1.png"></p>
+<h3 id="步驟三"><a href="#步驟三" class="headerlink" title="步驟三"></a>步驟三</h3><p>進入到新增 Repository 的設定中。<br><img src="/blog/images/create-github-profile-repository/post_content_img_2.png"><br>在<code>Repository name</code>那邊填入你的 Github 帳號名稱，填入後 Github 也會提醒你，這是一個很特別的 Repository，讓你可以新增一個自己的 Profile README！<br>簡單做個 Description，且<strong>請記得要選公開（public）和初始化 Repository 時要新增一個 README 檔案（README.md）！</strong><br>最後就可以到最下面完成創建 Repository 了！</p>
+<h3 id="步驟四"><a href="#步驟四" class="headerlink" title="步驟四"></a>步驟四</h3><p>要開始編輯自己的 Profile 了，移動到<code>你的帳號名稱/你的帳號名稱</code>下的<code>README.md</code>。<br><img src="/blog/images/create-github-profile-repository/post_content_img_3.png"><br>按下編輯鍵（一枝筆的 Icon），就可以編輯專屬於你的 Profile 介紹了！</p>
+<h3 id="步驟五"><a href="#步驟五" class="headerlink" title="步驟五"></a>步驟五</h3><p>最後等你編輯完成後，<strong>記得將你編輯的改變 Commit 上去 Github 的 Repository 上</strong>！<br>接下來你就可以到帳號頁面(<code>https://github.com/你的帳號</code>)看成果啦~<br><img src="/blog/images/create-github-profile-repository/post_content_img_4.png"></p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>這是一個讓大家認識你的一個好機會，但前提也是你的 Github 要有曝光度 XD<br>如果不喜歡 Online 的 MarkDown 編輯器的話也可以將 Repository Clone 下來，再本地端進行編輯~<br>也可以用其他線上的軟體撰寫好後，再貼上進行更動~</p>
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
 <li><a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/about-your-profile">Github - About your profile</a></li>
 </ul>
@@ -154,7 +154,7 @@
 <h2 id="用途："><a href="#用途：" class="headerlink" title="用途："></a>用途：</h2><p>將 SPA 和 SSR 的好處結合在一起。在首個屏幕的頁面渲染較快，且支援良好的 SEO，且之後採用客戶端渲染（CSR, Client Side Render）的方式執行。所以常常會被同構、Hybird、混合等等的形容詞形容。</p>
 <h2 id="準備專案"><a href="#準備專案" class="headerlink" title="準備專案"></a>準備專案</h2><h3 id="創建專案"><a href="#創建專案" class="headerlink" title="創建專案"></a>創建專案</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx nuxi init [nuxt-app]</span><br><span class="line"><span class="built_in">cd</span> [nuxt-app]</span><br></pre></td></tr></table></figure>
 
-<p>若途中有詢問你是否要安裝<a href="mailto:&#x6e;&#x75;&#120;&#116;&#64;&#x33;&#x2e;&#x30;&#46;&#48;&#45;&#114;&#99;">&#x6e;&#x75;&#120;&#116;&#64;&#x33;&#x2e;&#x30;&#46;&#48;&#45;&#114;&#99;</a>.*，請按 Y。</p>
+<p>若途中有詢問你是否要安裝<a href="mailto:&#x6e;&#117;&#120;&#116;&#x40;&#51;&#46;&#x30;&#x2e;&#48;&#45;&#114;&#x63;">&#x6e;&#117;&#120;&#116;&#x40;&#51;&#46;&#x30;&#x2e;&#48;&#45;&#114;&#x63;</a>.*，請按 Y。</p>
 <h3 id="安裝依賴"><a href="#安裝依賴" class="headerlink" title="安裝依賴"></a>安裝依賴</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
 <p>推薦使用 Npm、Yarn 套件管理程式，PNpM 現階段要加參數（–shamefully-hoist）才可正常 Install。</p>
