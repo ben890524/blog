@@ -1,5 +1,6 @@
 ---
 title: 物件導向的五大原則 - SOLID
+keywords: object oriented, solid, SOLID, 物件導向, 五大, 原則, 五大原則, 物件導向的五大原則, 物件導向五大原則
 date: 2022-11-05 00:45:12
 tags:
 - Object Oriented
