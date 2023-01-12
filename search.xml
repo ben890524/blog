@@ -124,7 +124,7 @@
   <entry>
     <title>Nuxt3介紹</title>
     <url>/blog/2022/12/16/nuxt3-introduction/</url>
-    <content><![CDATA[<h1 id="Nuxt3-簡介"><a href="#Nuxt3-簡介" class="headerlink" title="Nuxt3 簡介"></a>Nuxt3 簡介</h1><h2 id="Nuxt3-template-x2F-Nuxt3-starter"><a href="#Nuxt3-template-x2F-Nuxt3-starter" class="headerlink" title="Nuxt3 template &#x2F; Nuxt3 starter"></a>Nuxt3 template &#x2F; Nuxt3 starter</h2><h5 id="一個自製的nuxt3-template"><a href="#一個自製的nuxt3-template" class="headerlink" title="一個自製的nuxt3 template"></a><a href="https://github.com/ben890524/nuxt3-template">一個自製的nuxt3 template</a></h5><ul>
+    <content><![CDATA[<h1 id="Nuxt3-簡介"><a href="#Nuxt3-簡介" class="headerlink" title="Nuxt3 簡介"></a>Nuxt3 簡介</h1><h2 id="Nuxt3-template-x2F-Nuxt3-starter"><a href="#Nuxt3-template-x2F-Nuxt3-starter" class="headerlink" title="Nuxt3 template &#x2F; Nuxt3 starter"></a>Nuxt3 template &#x2F; Nuxt3 starter</h2><h5 id="一個自製的-nuxt3-template"><a href="#一個自製的-nuxt3-template" class="headerlink" title="一個自製的 nuxt3 template"></a><a href="https://github.com/ben890524/nuxt3-template">一個自製的 nuxt3 template</a></h5><ul>
 <li>nuxt3 stable</li>
 <li>tailwindcss</li>
 <li>pinia &amp; pinia-plugin-persistedstate</li>
@@ -154,7 +154,7 @@
 <h2 id="用途："><a href="#用途：" class="headerlink" title="用途："></a>用途：</h2><p>將 SPA 和 SSR 的好處結合在一起。在首個屏幕的頁面渲染較快，且支援良好的 SEO，且之後採用客戶端渲染（CSR, Client Side Render）的方式執行。所以常常會被同構、Hybird、混合等等的形容詞形容。</p>
 <h2 id="準備專案"><a href="#準備專案" class="headerlink" title="準備專案"></a>準備專案</h2><h3 id="創建專案"><a href="#創建專案" class="headerlink" title="創建專案"></a>創建專案</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx nuxi init [nuxt-app]</span><br><span class="line"><span class="built_in">cd</span> [nuxt-app]</span><br></pre></td></tr></table></figure>
 
-<p>若途中有詢問你是否要安裝<a href="mailto:&#x6e;&#117;&#120;&#116;&#x40;&#51;&#46;&#x30;&#x2e;&#48;&#45;&#114;&#x63;">&#x6e;&#117;&#120;&#116;&#x40;&#51;&#46;&#x30;&#x2e;&#48;&#45;&#114;&#x63;</a>.*，請按 Y。</p>
+<p>若途中有詢問你是否要安裝<a href="mailto:&#110;&#x75;&#120;&#116;&#64;&#51;&#x2e;&#48;&#46;&#48;&#45;&#114;&#99;">&#110;&#x75;&#120;&#116;&#64;&#51;&#x2e;&#48;&#46;&#48;&#45;&#114;&#99;</a>.*，請按 Y。</p>
 <h3 id="安裝依賴"><a href="#安裝依賴" class="headerlink" title="安裝依賴"></a>安裝依賴</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
 <p>推薦使用 Npm、Yarn 套件管理程式，PNpM 現階段要加參數（–shamefully-hoist）才可正常 Install。</p>
@@ -165,12 +165,12 @@
 
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm serve</span><br><span class="line">yarn serve</span><br><span class="line">pnpm serve</span><br></pre></td></tr></table></figure>
 
-<h2 id="Nuxt-的檔案架構（Directory-Structure）"><a href="#Nuxt-的檔案架構（Directory-Structure）" class="headerlink" title="Nuxt 的檔案架構（Directory Structure）"></a>Nuxt 的檔案架構（Directory Structure）</h2><p>Nuxt 的檔案結構大致上如下，下面會依次來做簡單介紹：<br><img src="https://i.imgur.com/6oaKlII.png"></p>
+<h2 id="Nuxt-的檔案架構（Directory-Structure）"><a href="#Nuxt-的檔案架構（Directory-Structure）" class="headerlink" title="Nuxt 的檔案架構（Directory Structure）"></a>Nuxt 的檔案架構（Directory Structure）</h2><p>Nuxt 的檔案結構大致上如下，下面會依次來做簡單介紹：<br><img src="/blog/images/nuxt3-introduction/post_content_img_1.png"></p>
 <h3 id="nuxt"><a href="#nuxt" class="headerlink" title=".nuxt"></a>.nuxt</h3><p>Nuxt 用這個資料夾裡面的 Script，在 Devlopment 時產生 Vue 的應用程式。<br><strong><em>官方建議是完全都不要碰，不然會在執行 nuxt dev 時，將&#x2F;.nuxt 目錄重新建立。</em></strong><br><strong><del>想了解有關 Nuxt 根據目錄結構生成的更多信息，可以往這個資料夾裡面的東西找。</del></strong></p>
 <h3 id="output"><a href="#output" class="headerlink" title=".output"></a>.output</h3><p>當你跑 Script 為了建立 Production(或是其他測試環境)的應用程式時，產出的檔案會被放在這個資料夾。<br><strong><em>官方建議是完全都不要碰，不然會在執行 nuxt dev 時，將&#x2F;.nuxt 目錄重新建立。</em></strong></p>
 <h3 id="assets"><a href="#assets" class="headerlink" title="assets"></a>assets</h3><p>可以放置網站所有的靜態資產，例如：階層樣式表(CSS)、字體樣式和圖片等等，專案架構打包工具(webpack 5 和 Vite)會處理到。</p>
-<h3 id="components"><a href="#components" class="headerlink" title="components"></a>components</h3><p>用來放置 Vue Component 的地方，這些 Components 用來之後可以匯入進頁面(pages)裡面，且達成重複利用的效果。<br>具有 Auto Import Components 的功能，不需要再各個頁面進行 Import，但 Auto Import 有它的限制。<br>下面兩種都是在&#x2F;components 底下，在頁面上皆可用 &lt; Footer &#x2F;&gt; 的方式取出來。<br><img src="https://i.imgur.com/PosHoYL.png"><br><img src="https://i.imgur.com/8gMu3QX.png"><br>若是是有用資料夾進行分類的，且分類底下還有更小的 component 的話，也有對應的 Auto Import 功能。<br><img src="https://i.imgur.com/5O3fbrn.png"><br>在 header 裡面的 SlideMenu 就可以用 header-slide-menu 或 HeaderSlideMenu 進行使用。<br><img src="https://i.imgur.com/zxQPmT5.png"><br>目前還是推薦使用自己 Import 進來的命名的方式，去 Import 各 Component，因為這樣編輯器(Visual Studio Code)可以追蹤的到，以開發維護的角度來看，比較方便。</p>
-<h3 id="composables"><a href="#composables" class="headerlink" title="composables"></a>composables</h3><p>用來放置 Vue Composables，這些 Composables 用來之後可以在任何頁面進行使用、運算。<br>且也支援 Auto Import Composables。<br>在&#x2F;composables 裡定義好，在 script setup 裡面，就可以直接使用你定義好的 composables。<br><img src="https://i.imgur.com/3OI9quZ.png"><br><img src="https://i.imgur.com/llJZ7V7.png"><br>一般的命名還是會以 Vue3 一貫的 Composition Api 的方式去命名，以 use 為開頭！</p>
+<h3 id="components"><a href="#components" class="headerlink" title="components"></a>components</h3><p>用來放置 Vue Component 的地方，這些 Components 用來之後可以匯入進頁面(pages)裡面，且達成重複利用的效果。<br>具有 Auto Import Components 的功能，不需要再各個頁面進行 Import，但 Auto Import 有它的限制。<br>下面兩種都是在&#x2F;components 底下，在頁面上皆可用 &lt; Footer &#x2F;&gt; 的方式取出來。<br><img src="/blog/images/nuxt3-introduction/post_content_img_2.png"><br><img src="/blog/images/nuxt3-introduction/post_content_img_3.png"><br>若是是有用資料夾進行分類的，且分類底下還有更小的 component 的話，也有對應的 Auto Import 功能。<br><img src="/blog/images/nuxt3-introduction/post_content_img_4.png"><br>在 header 裡面的 SlideMenu 就可以用 header-slide-menu 或 HeaderSlideMenu 進行使用。<br><img src="/blog/images/nuxt3-introduction/post_content_img_5.png"><br>目前還是推薦使用自己 Import 進來的命名的方式，去 Import 各 Component，因為這樣編輯器(Visual Studio Code)可以追蹤的到，以開發維護的角度來看，比較方便。</p>
+<h3 id="composables"><a href="#composables" class="headerlink" title="composables"></a>composables</h3><p>用來放置 Vue Composables，這些 Composables 用來之後可以在任何頁面進行使用、運算。<br>且也支援 Auto Import Composables。<br>在&#x2F;composables 裡定義好，在 script setup 裡面，就可以直接使用你定義好的 composables。<br><img src="/blog/images/nuxt3-introduction/post_content_img_6.png"><br><img src="/blog/images/nuxt3-introduction/post_content_img_7.png"><br>一般的命名還是會以 Vue3 一貫的 Composition Api 的方式去命名，以 use 為開頭！</p>
 <h3 id="content"><a href="#content" class="headerlink" title="content"></a>content</h3><p>Nuxt 的 Content 會讀取 content&#x2F;目錄並解析.md、.yml、.csv 和.json 的文件，後產生以檔案為基礎的 CMS。</p>
 <h3 id="layouts"><a href="#layouts" class="headerlink" title="layouts"></a>layouts</h3><p>Nuxt 提供了一個可自由制定的佈局框架，可以在整個應用程式中使用，非常適合將常見的可重用的佈局組件中，就可以迅速的在不同的內容頁面套用不同的樣板。</p>
 <figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 透過這樣的方式可以替換layout</span></span><br><span class="line"><span class="title function_">definePageMeta</span>(&#123;</span><br><span class="line">  <span class="attr">layout</span>: <span class="string">&#x27;custom&#x27;</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
@@ -221,6 +221,7 @@
 <h3 id="tsconfig-json"><a href="#tsconfig-json" class="headerlink" title="tsconfig.json"></a>tsconfig.json</h3><p>此檔案是.nuxt&#x2F;tsconfig.json 的擴充檔，可以依照專案的需求，對需要的設定進行客製化的調整。</p>
 <h6 id="HackMD-網址"><a href="#HackMD-網址" class="headerlink" title="HackMD 網址"></a><a href="https://hackmd.io/VZaRGDuXS8avfcF0g62qpg">HackMD 網址</a></h6><h6 id="tags-Nuxt3-SSR"><a href="#tags-Nuxt3-SSR" class="headerlink" title="tags: Nuxt3 SSR"></a>tags: <code>Nuxt3</code> <code>SSR</code></h6>]]></content>
       <categories>
+        <category>Frontend</category>
         <category>Nuxt3</category>
       </categories>
       <tags>
@@ -466,6 +467,59 @@
         <tag>Frontend</tag>
         <tag>Vue</tag>
         <tag>Google reCAPTCHA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue3 v-html / Nuxt3 v-html / css深度選擇器</title>
+    <url>/blog/2023/01/12/vue3-nuxt3-v-html-deep-selector/</url>
+    <content><![CDATA[<h1 id="Vue3-v-html-x2F-Nuxt3-v-html-x2F-Css-深度選擇器"><a href="#Vue3-v-html-x2F-Nuxt3-v-html-x2F-Css-深度選擇器" class="headerlink" title="Vue3 v-html &#x2F; Nuxt3 v-html &#x2F; Css 深度選擇器"></a>Vue3 v-html &#x2F; Nuxt3 v-html &#x2F; Css 深度選擇器</h1><h2 id="Vue-v-html"><a href="#Vue-v-html" class="headerlink" title="Vue v-html"></a>Vue v-html</h2><p>最近在接公司前後台資訊，其中在編輯商品時，是使用<a href="https://ckeditor.com/ckeditor-5/">CKEditor5</a>這個套件進行編輯的，存在資料庫的內容就會是 HTML 標籤語言，如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#x27;<span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/&quot;</span>&gt;</span>商品描述商品描述<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span>&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>在做 Vue 前端時，就不能使用<code>&#123;&#123;&#125;&#125;</code>大括號在模板語言中直接使用，因為字串中包含實體字符，至於關於實體字符可以參考<a href="https://ithelp.ithome.com.tw/articles/10202232#v-html">這篇</a>。</p>
+<p>那這邊馬上來實際運用一下：<br>父元件會傳 productDetail 這個 props，定義好 props 及預設值後，我用一個 computed 先進行處理，CKEditor5 在嵌入 iframe 影片時，要做一些處理，因為 CKEditor5 轉換出來的 HTML 在前端顯示不出來。<br>那<code>data_processEmbedTag</code>就是處理後的字串。</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">&lt;script setup lang=<span class="string">&quot;ts&quot;</span>&gt;</span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">IProps</span> &#123;</span><br><span class="line">  productDetail?: <span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> props = <span class="title function_">withDefaults</span>(defineProps&lt;<span class="title class_">IProps</span>&gt;(), &#123;</span><br><span class="line">  <span class="attr">productDetail</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(props.<span class="property">productDetail</span>);</span><br><span class="line"><span class="comment">// translate ck editor5 youtube iframe</span></span><br><span class="line"><span class="keyword">const</span> data_processEmbedTag = <span class="title function_">computed</span>(</span><br><span class="line">  <span class="function">() =&gt;</span></span><br><span class="line">    props.<span class="property">productDetail</span>?.<span class="title function_">replaceAll</span>(<span class="string">&#x27;oembed&#x27;</span>, <span class="string">&#x27;iframe&#x27;</span>).<span class="title function_">replaceAll</span>(<span class="string">&#x27;url&#x27;</span>, <span class="string">&#x27;src&#x27;</span>).<span class="title function_">replaceAll</span>(<span class="string">&#x27;watch?v=&#x27;</span>, <span class="string">&#x27;embed/&#x27;</span>) ?? <span class="string">&#x27;&#x27;</span></span><br><span class="line">);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>接下來就可以使用<code>v-html</code>綁進去 vue 模板語言裡面的 DOM 元素了：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;flex flex-col&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-html</span>=<span class="string">&quot;data_processEmbedTag&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>這是<code>data_processEmbedTag</code>的內容：<br><img src="/blog/images/vue3-nuxt3-v-html-deep-selector/post_content_img_1.png"><br>這是<code>v-html</code>呈現的內容：<br><img src="/blog/images/vue3-nuxt3-v-html-deep-selector/post_content_img_2.png"></p>
+<p>綁進去後你會發現，v-html 裡面所有的元素都吃不到 css，只有存進去資料庫的 inline style 會作用而已。所以這時候你就要使用 vue 的 css 的深度選擇器。</p>
+<h2 id="Vue-的-css-的深度選擇器"><a href="#Vue-的-css-的深度選擇器" class="headerlink" title="Vue 的 css 的深度選擇器"></a>Vue 的 css 的深度選擇器</h2><p>先說說為什麼要使用到深度選擇器：<br>Vue 在選染模板語言時，都會賦予元素一個 Hash 屬性，所以在瀏覽器的開發人員工具(F12)中常常會看到<code>data-v-hash</code>的元素，但是使用<code>v-html</code>渲染出來的不會有這樣的 Hash 屬性。<br>再來因為 Vue 在寫 css 樣式，可以使用關鍵字<code>&lt;style scoped&gt;</code>，可是使你在子物件裡定義的樣式，不會向外汙染全域的樣式，所以在正常情況會使用<code>scoped</code>關鍵字。但這時你寫了一個 style，就會只渲染在同一個 Hash 的原件，沒有 Hash 的是吃不到你設定的樣式的，例如：<code>v-html</code>產生出來的 DOM 元素。<br>元件在開發人員工具呈現的樣子：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-v-bc5f04ec</span>=<span class="string">&quot;&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>那冠有<code>scoped</code>的樣式就會這樣呈現：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">table</span><span class="selector-attr">[data-v-bc5f04ec]</span>,</span><br><span class="line"><span class="selector-tag">th</span><span class="selector-attr">[data-v-bc5f04ec]</span>,</span><br><span class="line"><span class="selector-tag">td</span><span class="selector-attr">[data-v-bc5f04ec]</span> &#123;</span><br><span class="line">  <span class="keyword">@apply</span> border-<span class="number">1</span> border-border-color;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>所以這樣是沒有辦法發揮樣式的作用的。所以就套上深度選擇器吧：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// deep selector change v-<span class="selector-tag">html</span> style</span><br><span class="line">:<span class="built_in">deep</span>(*) &#123;</span><br><span class="line">  <span class="keyword">@apply</span> text-sm tracking-wide;</span><br><span class="line">  <span class="selector-tag">table</span>,</span><br><span class="line">  <span class="selector-tag">th</span>,</span><br><span class="line">  <span class="selector-tag">td</span> &#123;</span><br><span class="line">    <span class="keyword">@apply</span> border-<span class="number">1</span> border-border-color;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">:<span class="built_in">deep</span>(figure.media) &#123;</span><br><span class="line">  <span class="selector-tag">iframe</span> &#123;</span><br><span class="line">    <span class="keyword">@apply</span> w-full;</span><br><span class="line">    <span class="attribute">height</span>: <span class="built_in">var</span>(--global-iframe-height);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">:<span class="built_in">deep</span>(iframe) &#123;</span><br><span class="line">  <span class="keyword">@apply</span> w-full;</span><br><span class="line">  <span class="attribute">height</span>: <span class="built_in">var</span>(--global-iframe-height);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>套用上深度選擇器後，就可以正常呈現了：<br><img src="/blog/images/vue3-nuxt3-v-html-deep-selector/post_content_img_3.png"></p>
+<h3 id="深度選擇器其他寫法"><a href="#深度選擇器其他寫法" class="headerlink" title="深度選擇器其他寫法"></a>深度選擇器其他寫法</h3><p>深度選擇器其實還有其他寫法：<br>寫法一：<code>::v-deep</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">::v-deep table,</span><br><span class="line">::v-deep th,</span><br><span class="line">::v-deep td &#123;</span><br><span class="line">  @apply border-1 border-border-color;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>這種寫法在 Vue3 會被警告：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[@vue/compiler-sfc] ::v-deep usage as a combinator has been deprecated. Use :deep(&lt;inner-selector&gt;) instead.</span><br></pre></td></tr></table></figure>
+
+<p>寫法二：<code>&gt;&gt;&gt;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; table,</span><br><span class="line">&gt;&gt;&gt; th,</span><br><span class="line">&gt;&gt;&gt; td &#123;</span><br><span class="line">  @apply border-1 border-border-color;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>寫法三：<code>/deep/</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/deep/ table,</span><br><span class="line">/deep/ th,</span><br><span class="line">/deep/ td &#123;</span><br><span class="line">  @apply border-1 border-border-color;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>寫法二、三寫法在 Vue3 也會被警告：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[@vue/compiler-sfc] the &gt;&gt;&gt; and /deep/ combinators have been deprecated. Use :deep() instead.</span><br></pre></td></tr></table></figure>
+
+<h4 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h4><p>所以是 Vue3 的狀態下，還是使用<code>:deep(&lt;inner-selector&gt;)</code>的寫法吧！</p>
+]]></content>
+      <categories>
+        <category>Frontend</category>
+        <category>Nuxt3</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>Frontend</tag>
+        <tag>Nuxt3</tag>
+        <tag>Vue</tag>
       </tags>
   </entry>
 </search>
