@@ -6,6 +6,7 @@ tags:
   - Nuxt3
   - Vue
 categories:
+  - Frontend
   - Nuxt3
 top_img: /images/default_banner.png
 cover: /images/nuxt3-introduction/cover.png
@@ -15,13 +16,14 @@ cover: /images/nuxt3-introduction/cover.png
 # Nuxt3 簡介
 
 ## Nuxt3 template / Nuxt3 starter
-##### [一個自製的nuxt3 template](https://github.com/ben890524/nuxt3-template)
+
+##### [一個自製的 nuxt3 template](https://github.com/ben890524/nuxt3-template)
+
 - nuxt3 stable
 - tailwindcss
 - pinia & pinia-plugin-persistedstate
 - i18n(@intlify/nuxt3) and store in pinia-persist
 - simple template for page/layout/error
-
 
 ## Description(簡述)：
 
@@ -74,7 +76,7 @@ HTML 網頁資料會在伺服器端進行編譯，編譯完成才會回傳回客
 
 ### 創建專案
 
-``` bash
+```bash
 npx nuxi init [nuxt-app]
 cd [nuxt-app]
 ```
@@ -83,7 +85,7 @@ cd [nuxt-app]
 
 ### 安裝依賴
 
-``` bash
+```bash
 npm install
 ```
 
@@ -116,7 +118,7 @@ pnpm serve
 ## Nuxt 的檔案架構（Directory Structure）
 
 Nuxt 的檔案結構大致上如下，下面會依次來做簡單介紹：
-![](https://i.imgur.com/6oaKlII.png)
+![](/images/nuxt3-introduction/post_content_img_1.png)
 
 ### .nuxt
 
@@ -138,12 +140,12 @@ Nuxt 用這個資料夾裡面的 Script，在 Devlopment 時產生 Vue 的應用
 用來放置 Vue Component 的地方，這些 Components 用來之後可以匯入進頁面(pages)裡面，且達成重複利用的效果。
 具有 Auto Import Components 的功能，不需要再各個頁面進行 Import，但 Auto Import 有它的限制。
 下面兩種都是在/components 底下，在頁面上皆可用 < Footer /> 的方式取出來。
-![](https://i.imgur.com/PosHoYL.png)
-![](https://i.imgur.com/8gMu3QX.png)
+![](/images/nuxt3-introduction/post_content_img_2.png)
+![](/images/nuxt3-introduction/post_content_img_3.png)
 若是是有用資料夾進行分類的，且分類底下還有更小的 component 的話，也有對應的 Auto Import 功能。
-![](https://i.imgur.com/5O3fbrn.png)
+![](/images/nuxt3-introduction/post_content_img_4.png)
 在 header 裡面的 SlideMenu 就可以用 header-slide-menu 或 HeaderSlideMenu 進行使用。
-![](https://i.imgur.com/zxQPmT5.png)
+![](/images/nuxt3-introduction/post_content_img_5.png)
 目前還是推薦使用自己 Import 進來的命名的方式，去 Import 各 Component，因為這樣編輯器(Visual Studio Code)可以追蹤的到，以開發維護的角度來看，比較方便。
 
 ### composables
@@ -151,8 +153,8 @@ Nuxt 用這個資料夾裡面的 Script，在 Devlopment 時產生 Vue 的應用
 用來放置 Vue Composables，這些 Composables 用來之後可以在任何頁面進行使用、運算。
 且也支援 Auto Import Composables。
 在/composables 裡定義好，在 script setup 裡面，就可以直接使用你定義好的 composables。
-![](https://i.imgur.com/3OI9quZ.png)
-![](https://i.imgur.com/llJZ7V7.png)
+![](/images/nuxt3-introduction/post_content_img_6.png)
+![](/images/nuxt3-introduction/post_content_img_7.png)
 一般的命名還是會以 Vue3 一貫的 Composition Api 的方式去命名，以 use 為開頭！
 
 ### content
