@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>前端知識區 / 前端面試題 | 猴子Ben不見</title><meta name="author" content="猴子 Ben"><meta name="copyright" content="猴子 Ben"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="fffdfa"><meta name="description" content="For Front-End LearningHTML 行內元素&amp;區塊元素  Css Css 預處理器 Pre-procesorCSS 選擇器 SelectorCSS 權重CSS Box ModelCSS Reset &#x2F; Normalized網上推的 CSS 面試題目   每一個瀏覽器在定義每一個HTML標籤時用的style不一樣，會出現你的應用程式前端在各個瀏覽器顯示出來的結果可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端知識區 &#x2F; 前端面試題">
+<meta property="og:url" content="https://ben890524.github.io/blog/posts/frontend-knowledge/index.html">
+<meta property="og:site_name" content="猴子Ben不見">
+<meta property="og:description" content="For Front-End LearningHTML 行內元素&amp;區塊元素  Css Css 預處理器 Pre-procesorCSS 選擇器 SelectorCSS 權重CSS Box ModelCSS Reset &#x2F; Normalized網上推的 CSS 面試題目   每一個瀏覽器在定義每一個HTML標籤時用的style不一樣，會出現你的應用程式前端在各個瀏覽器顯示出來的結果可">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://ben890524.github.io/blog/images/favicon.ico">
+<meta property="article:published_time" content="2022-12-16T03:18:45.000Z">
+<meta property="article:modified_time" content="2023-02-27T07:20:06.246Z">
+<meta property="article:author" content="猴子 Ben">
+<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="Frontend">
+<meta property="article:tag" content="Html">
+<meta property="article:tag" content="Javascript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ben890524.github.io/blog/images/favicon.ico"><link rel="shortcut icon" href="/blog/images/favicon.ico"><link rel="canonical" href="https://ben890524.github.io/blog/posts/frontend-knowledge/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/blog/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/blog/',
+  algolia: undefined,
+  localSearch: {"path":"/blog/search.xml","preload":true,"languages":{"hits_empty":"找不到您查詢的內容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '前端知識區 / 前端面試題',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-02-27 15:20:06'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'fffdfa')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/blog/css/header.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/blog/images/blogger_avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/blog/tags/"><div class="headline">標籤</div><div class="length-num">12</div></a><a href="/blog/categories/"><div class="headline">分類</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 關於我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/blog/images/default_banner.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/blog/">猴子Ben不見</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜尋</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 關於我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">前端知識區 / 前端面試題</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2022-12-16T03:18:45.000Z" title="發表於 2022-12-16 11:18:45">2022-12-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2023-02-27T07:20:06.246Z" title="更新於 2023-02-27 15:20:06">2023-02-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/blog/categories/Frontend/">Frontend</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字數總計:</span><span class="word-count">325</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀時長:</span><span>1分鐘</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="前端知識區 / 前端面試題"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="For-Front-End-Learning"><a href="#For-Front-End-Learning" class="headerlink" title="For Front-End Learning"></a>For Front-End Learning</h1><h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><blockquote>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.daconote.com/span-div-difference/">行內元素&amp;區塊元素</a></p>
+</blockquote>
+<h2 id="Css"><a href="#Css" class="headerlink" title="Css"></a>Css</h2><blockquote>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://changtsuiling.gitbooks.io/sass/content/chapter1/1-1-shi-me-shi-css-yu-chu-li-qi-ff1f.html">Css 預處理器 Pre-procesor</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://injerry.pixnet.net/blog/post/38847966#:~:text=%E9%81%B8%E5%8F%96%E5%99%A8%EF%BC%88Selector%EF%BC%89%EF%BC%8C%E4%B9%9F%E6%9C%89,%E9%80%99%E6%A8%A3%E7%BF%BB%E8%AD%AF%E4%B9%9F%E5%B0%8D%E5%95%A6%EF%BC%89">CSS 選擇器 Selector</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ithelp.ithome.com.tw/articles/10196454">CSS 權重</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.oxxostudio.tw/articles/202008/css-box-model.html">CSS Box Model</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ithelp.ithome.com.tw/articles/10196528?sc=rss.qu">CSS Reset &#x2F; Normalized</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.facebook.com/groups/f2e.tw/permalink/4925715637465762/">網上推的 CSS 面試題目</a></p>
+</blockquote>
+<ol>
+<li>每一個瀏覽器在定義每一個HTML標籤時用的style不一樣，會出現你的應用程式前端在各個瀏覽器顯示出來的結果可能不一樣，所以製作出reset.css，強制讓Browser的基本屬性變為你設定的值，讓不統一的地方一致，缺點是不彈性。所以後續解決這個問題，才多了CSS Normalize去繼承Browser原有的CSS屬性，再去做加法。</li>
+<li>哪種CSS會被蓋掉、哪種CSS權重比較重，在同樣指定的CSS上，哪一個會被套用。簡單來說important&gt;inline-style&gt;id&gt;class&#x3D;attribute&#x3D;psuedo-class&gt;html-element。</li>
+<li>html tags中的box element，由外往內有margin、border、padding和content。</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://w3c.hexschool.com/blog/35afa83f">CSS BEM設計模式</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.yuyansoftware.com.tw/2022/02/css-cascade-layers-specificity/">CSS Cascade Layers @layer 解決css權重</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.hiskio.com/tailwind-css-or-bootstrap/">Tailwind css v.s Bootstrap</a></p>
+</blockquote>
+<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><blockquote>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ithelp.ithome.com.tw/articles/10190873">JS 基本中的基本</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://shawnlin0201.github.io/JavaScript/JavaScript-Automatic-Semicolon-Insertion/">JS Automatic Semicolon</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://medium.com/helena-chang/js%E4%BA%8C%E9%83%A8%E6%9B%B2-%E7%AB%8B%E5%8D%B3%E5%87%BD%E5%BC%8F-iife-b60bd694bbea">JS IIFE</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ithelp.ithome.com.tw/articles/10266627">JS 宣告提升 Hoisting</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ithelp.ithome.com.tw/articles/10265819">JS 冒泡事件 Bubble Event</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hackmd.io/@Heidi-Liu/note-fe201-dom">JS 冒泡事件&#x2F;事件捕獲 Event Bubbling&#x2F;Event Capturing</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://pjchender.dev/javascript/js-closure/">JS 閉包 Closure</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://medium.com/take-a-day-off/js-scope-%E4%BD%9C%E7%94%A8%E5%9F%9F-ee536640963b">JS 作用域 Scope</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://pjchender.dev/javascript/js-promise/">JS Promise</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://medium.com/itsems-frontend/javascript-event-loop-event-queue-call-stack-74a02fed5625">JS Event Loop</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://medium.com/@mengchiang000/js%E5%9F%BA%E6%9C%AC%E8%A7%80%E5%BF%B5-%E5%8E%9F%E5%9E%8B%E9%8F%88-prototype-chain-96c742893795">JS 原型鏈 Prototype Chain</a></p>
+</blockquote>
+<h2 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h2><h2 id="Browser"><a href="#Browser" class="headerlink" title="Browser"></a>Browser</h2><blockquote>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://notfalse.net/7/three-way-handshake">TCP 三向交握</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ithelp.ithome.com.tw/articles/10250980">Http Methods</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ithelp.ithome.com.tw/articles/10238084">CORS</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ithelp.ithome.com.tw/articles/10235079">DOM v.s BOM</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://5xruby.tw/posts/what-is-jwt">JWT JSON Web Token</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://shubo.io/rendering-patterns/">SSR v.s CSR</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://medium.com/@bebebobohaha/cookie-localstorage-sessionstorage-%E5%B7%AE%E7%95%B0-9e1d5df3dd7f">LocalStorage v.s SessionStorage v.s Cookie</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://caniuse.com/">What Can I use?</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ikala.cloud/grpc-openapi-and-rest-1/#:~:text=gRPC%20%E6%98%AF%E4%B8%80%E7%A8%AE%E5%AF%A6%E4%BD%9C,%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F%E8%88%87%E6%AD%A4%E7%9B%B8%E5%8F%8D%E3%80%82">REST v.s gRPC v.s OpenAPI</a></p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://ben890524.github.io/blog">猴子 Ben</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://ben890524.github.io/blog/posts/frontend-knowledge/">https://ben890524.github.io/blog/posts/frontend-knowledge/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://ben890524.github.io/blog" target="_blank">猴子Ben不見</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/blog/tags/CSS/">CSS</a><a class="post-meta__tags" href="/blog/tags/Frontend/">Frontend</a><a class="post-meta__tags" href="/blog/tags/Html/">Html</a><a class="post-meta__tags" href="/blog/tags/Javascript/">Javascript</a></div><div class="post_share"><div class="social-share" data-image="/blog/images/favicon.ico" data-sites="facebook,twitter,wechat,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/blog/posts/vue-google-recaptcha/"><img class="prev-cover" src="/blog/images/vue-google-recaptcha/cover.png" onerror="onerror=null;src='/blog/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Vue 實作 Google reCAPTCHA / Google 非機器人驗證</div></div></a></div><div class="next-post pull-right"><a href="/blog/posts/nuxt3-introduction/"><img class="next-cover" src="/blog/images/nuxt3-introduction/cover.png" onerror="onerror=null;src='/blog/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Nuxt3介紹</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相關推薦</span></div><div class="relatedPosts-list"><div><a href="/blog/posts/vue3-nuxt3-v-html-deep-selector/" title="Vue3 v-html &#x2F; Nuxt3 v-html &#x2F; css深度選擇器"><img class="cover" src="/blog/images/vue3-nuxt3-v-html-deep-selector/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-01-12</div><div class="title">Vue3 v-html &#x2F; Nuxt3 v-html &#x2F; css深度選擇器</div></div></a></div><div><a href="/blog/posts/css-challenges-practices-games/" title="CSS挑戰 &#x2F; CSS練習 &#x2F; CSS小遊戲"><img class="cover" src="/blog/images/css-challenges-practices-games/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-11-02</div><div class="title">CSS挑戰 &#x2F; CSS練習 &#x2F; CSS小遊戲</div></div></a></div><div><a href="/blog/posts/vue-google-recaptcha/" title="Vue 實作 Google reCAPTCHA &#x2F; Google 非機器人驗證"><img class="cover" src="/blog/images/vue-google-recaptcha/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-21</div><div class="title">Vue 實作 Google reCAPTCHA &#x2F; Google 非機器人驗證</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/blog/images/blogger_avatar.jpg" onerror="this.onerror=null;this.src='/blog/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">猴子 Ben</div><div class="author-info__description">這裡是努力成為前端工程師的猴子，這裡有很多前端、工作上的分享，歡銀來逛逛~</div></div><div class="card-info-data site-data is-center"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/blog/tags/"><div class="headline">標籤</div><div class="length-num">12</div></a><a href="/blog/categories/"><div class="headline">分類</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ben890524"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://www.instagram.com/ben890524" rel="external nofollow noreferrer" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a><a class="social-icon" href="https://www.linkedin.com/in/%E7%A7%89%E6%AC%A3-%E6%9D%8E-319884201/" rel="external nofollow noreferrer" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">部落格還在努力生成中QAQ</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#For-Front-End-Learning"><span class="toc-number">1.</span> <span class="toc-text">For Front-End Learning</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML"><span class="toc-number">1.1.</span> <span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Css"><span class="toc-number">1.2.</span> <span class="toc-text">Css</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript"><span class="toc-number">1.3.</span> <span class="toc-text">JavaScript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TypeScript"><span class="toc-number">1.4.</span> <span class="toc-text">TypeScript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Browser"><span class="toc-number">1.5.</span> <span class="toc-text">Browser</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/blog/posts/vue3-nuxt3-v-html-deep-selector/" title="Vue3 v-html / Nuxt3 v-html / css深度選擇器"><img src="/blog/images/vue3-nuxt3-v-html-deep-selector/cover.png" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="Vue3 v-html / Nuxt3 v-html / css深度選擇器"/></a><div class="content"><a class="title" href="/blog/posts/vue3-nuxt3-v-html-deep-selector/" title="Vue3 v-html / Nuxt3 v-html / css深度選擇器">Vue3 v-html / Nuxt3 v-html / css深度選擇器</a><time datetime="2023-01-12T08:11:17.000Z" title="發表於 2023-01-12 16:11:17">2023-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/posts/vue-google-recaptcha/" title="Vue 實作 Google reCAPTCHA / Google 非機器人驗證"><img src="/blog/images/vue-google-recaptcha/cover.png" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="Vue 實作 Google reCAPTCHA / Google 非機器人驗證"/></a><div class="content"><a class="title" href="/blog/posts/vue-google-recaptcha/" title="Vue 實作 Google reCAPTCHA / Google 非機器人驗證">Vue 實作 Google reCAPTCHA / Google 非機器人驗證</a><time datetime="2022-12-21T05:58:25.000Z" title="發表於 2022-12-21 13:58:25">2022-12-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/posts/frontend-knowledge/" title="前端知識區 / 前端面試題"><img src="/blog/images/favicon.ico" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="前端知識區 / 前端面試題"/></a><div class="content"><a class="title" href="/blog/posts/frontend-knowledge/" title="前端知識區 / 前端面試題">前端知識區 / 前端面試題</a><time datetime="2022-12-16T03:18:45.000Z" title="發表於 2022-12-16 11:18:45">2022-12-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/posts/nuxt3-introduction/" title="Nuxt3介紹"><img src="/blog/images/nuxt3-introduction/cover.png" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="Nuxt3介紹"/></a><div class="content"><a class="title" href="/blog/posts/nuxt3-introduction/" title="Nuxt3介紹">Nuxt3介紹</a><time datetime="2022-12-16T03:02:37.000Z" title="發表於 2022-12-16 11:02:37">2022-12-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/posts/object-oriented-principles-solid/" title="物件導向的五大原則 - SOLID"><img src="/blog/images/favicon.ico" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="物件導向的五大原則 - SOLID"/></a><div class="content"><a class="title" href="/blog/posts/object-oriented-principles-solid/" title="物件導向的五大原則 - SOLID">物件導向的五大原則 - SOLID</a><time datetime="2022-11-04T16:45:12.000Z" title="發表於 2022-11-05 00:45:12">2022-11-05</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/blog/images/default_footer_img.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By 猴子 Ben</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">到最底啦！往上一點吧 ~<br>Top / Footer Image from Pattern Library.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜尋</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  資料庫載入中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/blog/js/utils.js"></script><script src="/blog/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/blog/js/search/local-search.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

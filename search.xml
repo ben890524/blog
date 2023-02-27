@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>創建你Github帳號上的自我介紹（Profile Repository）</title>
-    <url>/blog/2022/10/30/create-github-profile-repository/</url>
+    <url>/blog/posts/create-github-profile-repository/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果有在做開發或是軟體的研究，或是研究開放的 Lib，都會有接觸到版控這件事吧！<br>那你可能就有 Github 帳號，如果有做一些公開的 Repository，你的 Github 帳號有機會被別人看到。<br>在你的帳號頁面(<code>https://github.com/你的帳號</code>)，就可以填入你自己的簡單個人資料。<br>但如果想要分享更多資訊給別人知道該怎麼做呢？</p>
 <p>Github 有提供一個特別的 Repository 給每個帳號，讓使用者可以自訂想要分享的資訊給大家看到。那這個 Repository 就是在自己帳號下創建一個跟帳號名字一樣的 Repository。<br>例如：我的 Github 是 ben890524，那我的 Profile Repository 就會是<code>ben890524/ben890524</code>。<br>那接下來就會有簡單的圖文來新增你自己的 Profile Repository！</p>
 <h2 id="新增流程"><a href="#新增流程" class="headerlink" title="新增流程"></a>新增流程</h2><h3 id="步驟一"><a href="#步驟一" class="headerlink" title="步驟一"></a>步驟一</h3><p>首先先到<a href="https://github.com/">Github</a>然後登入你的帳號。</p>
@@ -25,7 +25,7 @@
   </entry>
   <entry>
     <title>CSS挑戰 / CSS練習 / CSS小遊戲</title>
-    <url>/blog/2022/11/02/css-challenges-practices-games/</url>
+    <url>/blog/posts/css-challenges-practices-games/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>很多人前端第一個接觸的一定就是Html和CSS，那我第一次也是高中的時候，用著作業系統內建的記事本寫著Html和CSS~XD<br>那時想知道一個新的Html Element或是想套一個新的CSS樣式，都是直接上Google找的，也很少在看書，所以學的算是零零散散的。<br>之前別人問起相關知識時，也說不出個專有名詞或要等他描述後，我才知道，所以就想說網路上，有沒有一些挑戰或是帶入遊戲可以邊學習的網站，除了可以學習到基本知識外，還有一些簡單的解釋，且在最後做完後，還可以用這個網頁來證明說，我有這些技能XD。<br>這篇就是介紹日前找到關於CSS的小挑戰，但其實可以當作一個學習知識的遊戲~~</p>
 <h2 id="介紹開始"><a href="#介紹開始" class="headerlink" title="介紹開始"></a>介紹開始</h2><h3 id="CSS-Diner"><a href="#CSS-Diner" class="headerlink" title="CSS Diner"></a>CSS Diner</h3><p>CSS有很多選擇器（Selector），所以就會有很多語法。有些語法你可能看都沒有看過，但很多實務狀況就會剛好需要，在不知道這些選擇器時，你可能已經用了id或是其他方式，改了CSS的樣式。<br>了解或學了這些選擇器，他們一定會在日後幫你的（ 誤</p>
 <blockquote>
@@ -71,7 +71,7 @@
   </entry>
   <entry>
     <title>前端知識區 / 前端面試題</title>
-    <url>/blog/2022/12/16/frontend-knowledge/</url>
+    <url>/blog/posts/frontend-knowledge/</url>
     <content><![CDATA[<h1 id="For-Front-End-Learning"><a href="#For-Front-End-Learning" class="headerlink" title="For Front-End Learning"></a>For Front-End Learning</h1><h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><blockquote>
 <p><a href="https://www.daconote.com/span-div-difference/">行內元素&amp;區塊元素</a></p>
 </blockquote>
@@ -105,7 +105,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/blog/2022/10/27/hello-world/</url>
+    <url>/blog/posts/hello-world/</url>
     <content><![CDATA[<p>這是一篇Hexo自動產生的文件<br>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -123,7 +123,7 @@
   </entry>
   <entry>
     <title>Nuxt3介紹</title>
-    <url>/blog/2022/12/16/nuxt3-introduction/</url>
+    <url>/blog/posts/nuxt3-introduction/</url>
     <content><![CDATA[<h1 id="Nuxt3-簡介"><a href="#Nuxt3-簡介" class="headerlink" title="Nuxt3 簡介"></a>Nuxt3 簡介</h1><h2 id="Nuxt3-template-x2F-Nuxt3-starter"><a href="#Nuxt3-template-x2F-Nuxt3-starter" class="headerlink" title="Nuxt3 template &#x2F; Nuxt3 starter"></a>Nuxt3 template &#x2F; Nuxt3 starter</h2><h5 id="一個自製的-nuxt3-template"><a href="#一個自製的-nuxt3-template" class="headerlink" title="一個自製的 nuxt3 template"></a><a href="https://github.com/ben890524/nuxt3-template">一個自製的 nuxt3 template</a></h5><ul>
 <li>nuxt3 stable</li>
 <li>tailwindcss</li>
@@ -154,7 +154,7 @@
 <h2 id="用途："><a href="#用途：" class="headerlink" title="用途："></a>用途：</h2><p>將 SPA 和 SSR 的好處結合在一起。在首個屏幕的頁面渲染較快，且支援良好的 SEO，且之後採用客戶端渲染（CSR, Client Side Render）的方式執行。所以常常會被同構、Hybird、混合等等的形容詞形容。</p>
 <h2 id="準備專案"><a href="#準備專案" class="headerlink" title="準備專案"></a>準備專案</h2><h3 id="創建專案"><a href="#創建專案" class="headerlink" title="創建專案"></a>創建專案</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx nuxi init [nuxt-app]</span><br><span class="line"><span class="built_in">cd</span> [nuxt-app]</span><br></pre></td></tr></table></figure>
 
-<p>若途中有詢問你是否要安裝<a href="mailto:&#110;&#x75;&#120;&#116;&#64;&#51;&#x2e;&#48;&#46;&#48;&#45;&#114;&#99;">&#110;&#x75;&#120;&#116;&#64;&#51;&#x2e;&#48;&#46;&#48;&#45;&#114;&#99;</a>.*，請按 Y。</p>
+<p>若途中有詢問你是否要安裝<a href="mailto:&#x6e;&#x75;&#x78;&#116;&#x40;&#x33;&#46;&#48;&#46;&#x30;&#45;&#114;&#x63;">&#x6e;&#x75;&#x78;&#116;&#x40;&#x33;&#46;&#48;&#46;&#x30;&#45;&#114;&#x63;</a>.*，請按 Y。</p>
 <h3 id="安裝依賴"><a href="#安裝依賴" class="headerlink" title="安裝依賴"></a>安裝依賴</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
 <p>推薦使用 Npm、Yarn 套件管理程式，PNpM 現階段要加參數（–shamefully-hoist）才可正常 Install。</p>
@@ -231,7 +231,7 @@
   </entry>
   <entry>
     <title>物件導向 特性 - 物件導向四大特性</title>
-    <url>/blog/2022/11/04/object-oriented-features-concepts/</url>
+    <url>/blog/posts/object-oriented-features-concepts/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇要來介紹物件導向的四大概念，那就來簡單介紹物件導向是怎麼樣的概念~<br>物件導向是將大部分的程式碼變成像是物件的方式進行呈現，程式互相會是以物件的方式進行溝通。物件跟物件之間的溝通，可以想成是人與人進行溝通，每個人都會有姓名、性別、年齡等等，這些在物件就是<strong>屬性（Attributes）</strong>；每個人也都會有技能或是動作，在物件我們就稱它為<strong>方法（Methods）</strong>。<br>一個物件會由屬性跟方法所組成，但這個時候你可能會有一些困惑，如果人是一個物件，但有可能我有一些事情是不想要給別人知道的，那該怎麼辦？<br>物件的屬性和方法都有它的<strong>可視性（Visibility）</strong>，可以使比較敏感的資料不被揭露，達到資料隱藏（Information Hiding）的效果。<br>簡單的介紹完物件導向的基本後，就來介紹物件導向的四大基本概念吧~</p>
 <h2 id="物件導向四大基本概念"><a href="#物件導向四大基本概念" class="headerlink" title="物件導向四大基本概念"></a>物件導向四大基本概念</h2><ol>
 <li>封裝（Encapsulation）</li>
@@ -279,7 +279,7 @@
   </entry>
   <entry>
     <title>物件導向的五大原則 - SOLID</title>
-    <url>/blog/2022/11/04/object-oriented-principles-solid/</url>
+    <url>/blog/posts/object-oriented-principles-solid/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>俗話說的好「不聽老人言，吃虧在眼前」，物件導向程式設計的五個基本原則是早期程式開發就存在的原則，既然能套用到至今，代表一定有它的道理，那今天就是要來窺探其中的奧妙（？<br>這些原則都同時被遵守時，它們可以使一個軟體更容易進行維護和系統的擴充變得更加彈性。那我們就來看看這些原則吧~</p>
 <h2 id="SOLID為物件導向的五大原則"><a href="#SOLID為物件導向的五大原則" class="headerlink" title="SOLID為物件導向的五大原則"></a>SOLID為物件導向的五大原則</h2><ul>
 <li><strong>S : Single Responsibility Principle</strong></li>
@@ -370,7 +370,7 @@
   </entry>
   <entry>
     <title>Vue 實作 Google reCAPTCHA / Google 非機器人驗證</title>
-    <url>/blog/2022/12/21/vue-google-recaptcha/</url>
+    <url>/blog/posts/vue-google-recaptcha/</url>
     <content><![CDATA[<h1 id="Vue-實作-Google-reCAPTCHA-x2F-Google-非機器人驗證"><a href="#Vue-實作-Google-reCAPTCHA-x2F-Google-非機器人驗證" class="headerlink" title="Vue 實作 Google reCAPTCHA &#x2F; Google 非機器人驗證"></a>Vue 實作 Google reCAPTCHA &#x2F; Google 非機器人驗證</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因為工作上的需要，所以要來研究 Google reCAPTCHA，公司是用 Vue，所以會來用 Vue 來實做看看，後續看看能不能整合進去公司的 Nuxt3 的前台。<del>最下面有本次實作的範例檔案，有需要可以直接取 XD</del></p>
 <h2 id="Google-reCAPTCHA"><a href="#Google-reCAPTCHA" class="headerlink" title="Google reCAPTCHA"></a>Google reCAPTCHA</h2><p>因為網站安全性問題，或是要防止機器人來到你的網站，佔用你的伺服器空間，所以很多網站都會連接 Google reCAPTCHA，來讓 Google 幫你檢驗，當前使用者是不是機器人~<br>這功能應該很常見，想必大家一定有看過一個勾勾旁邊是我不是機器人，或是一個九宮格請你選取題目指示的圖片，這些都是 Google reCAPTCHA 的實作。<br>Google reCAPTCHA 主要有以下幾種：</p>
 <ol>
@@ -471,7 +471,7 @@
   </entry>
   <entry>
     <title>Vue3 v-html / Nuxt3 v-html / css深度選擇器</title>
-    <url>/blog/2023/01/12/vue3-nuxt3-v-html-deep-selector/</url>
+    <url>/blog/posts/vue3-nuxt3-v-html-deep-selector/</url>
     <content><![CDATA[<h1 id="Vue3-v-html-x2F-Nuxt3-v-html-x2F-Css-深度選擇器"><a href="#Vue3-v-html-x2F-Nuxt3-v-html-x2F-Css-深度選擇器" class="headerlink" title="Vue3 v-html &#x2F; Nuxt3 v-html &#x2F; Css 深度選擇器"></a>Vue3 v-html &#x2F; Nuxt3 v-html &#x2F; Css 深度選擇器</h1><h2 id="Vue-v-html"><a href="#Vue-v-html" class="headerlink" title="Vue v-html"></a>Vue v-html</h2><p>最近在接公司前後台資訊，其中在編輯商品時，是使用<a href="https://ckeditor.com/ckeditor-5/">CKEditor5</a>這個套件進行編輯的，存在資料庫的內容就會是 HTML 標籤語言，如下：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#x27;<span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/&quot;</span>&gt;</span>商品描述商品描述<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span>&#x27;</span><br></pre></td></tr></table></figure>
 
