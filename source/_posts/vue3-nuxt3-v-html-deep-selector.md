@@ -1,7 +1,8 @@
 ---
 title: Vue3 v-html / Nuxt3 v-html / css深度選擇器
-date: 2023-01-12 16:11:17
-keywords: frontend, nuxt, nuxt3, Nuxt3 v-html, nuxt3 v-html, vue3 v-html, Vue3 v-html, Vue v-html, vue v-html, css深度選擇器, css 深度選擇器, 深度選擇器, deep selector
+keywords: >-
+  frontend, nuxt, nuxt3, Nuxt3 v-html, nuxt3 v-html, vue3 v-html, Vue3 v-html,
+  Vue v-html, vue v-html, css深度選擇器, css 深度選擇器, 深度選擇器, deep selector
 tags:
   - Frontend
   - Vue
@@ -12,6 +13,8 @@ categories:
   - Nuxt3
 top_img: /images/default_banner.png
 cover: /images/vue3-nuxt3-v-html-deep-selector/cover.png
+abbrlink: c035b82a
+date: 2023-01-12 16:11:17
 ---
 
 # Vue3 v-html / Nuxt3 v-html / Css 深度選擇器

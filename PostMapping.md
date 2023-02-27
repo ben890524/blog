@@ -6,3 +6,4 @@ id - post_name
 5 - nuxt3-introduction
 6 - frontend-knowledge
 7 - vue-google-recaptcha
+8 - vue3-nuxt3-v-html-deep-selector
