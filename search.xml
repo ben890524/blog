@@ -122,6 +122,79 @@
 ]]></content>
   </entry>
   <entry>
+    <title>nuxt3 開發者工具</title>
+    <url>/blog/posts/nuxt3-devtools/</url>
+    <content><![CDATA[<h1 id="Nuxt3-開發者工具-x2F-Nuxt3-Devtools"><a href="#Nuxt3-開發者工具-x2F-Nuxt3-Devtools" class="headerlink" title="Nuxt3 開發者工具 &#x2F; Nuxt3-Devtools"></a>Nuxt3 開發者工具 &#x2F; Nuxt3-Devtools</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>就在二月上旬，Nuxt 大佬 <a href="https://github.com/antfu">antfu (Anthony Fu)</a>，發佈了<a href="https://github.com/nuxt/devtools">Nuxt3 開發者工具（nuxt-devtools）</a>，可以讓我們這些 Nuxt 開發者，在開發中有更好的體驗和及時的追蹤。</p>
+<h2 id="版本限制"><a href="#版本限制" class="headerlink" title="版本限制"></a>版本限制</h2><p><code>nuxt-devtools</code>釋出前，nuxt 發行正式版一段時間了，所以<code>nuxt-devtools</code>有一些版本的限制：</p>
+<ul>
+<li>Nuxt DevTools requires Nuxt v3.1.0 or higher.</li>
+</ul>
+<p>只要是在 Nuxt v3.1.0 以上的版本，皆可以安裝，也可以直接進行 Nuxt 更新，更新到最新的版本。<br>若要更新，可以使用 Nuxt 內建的函式庫 Nuxi 來更新。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx nuxi upgrade</span><br></pre></td></tr></table></figure>
+
+<h2 id="安裝方式"><a href="#安裝方式" class="headerlink" title="安裝方式"></a>安裝方式</h2><h3 id="簡短介紹"><a href="#簡短介紹" class="headerlink" title="簡短介紹"></a>簡短介紹</h3><p><code>nuxt-devtools</code>官方文件有提供兩個方式安裝，這邊簡單的用條列式，分析一下兩個方式的差異：</p>
+<ol>
+<li>使用 nuxi 指令依據各 Project 啟動<br>1.1 使用 nuxi 指令就可以開啟<br>1.2 是依照 Project 來執行 nuxt-devtools 的，不會因為開啟後，所有 nuxt3 Project 都開啟<br>1.3 設定會儲存在本地的資料夾<code>~/.nuxtrc</code>裡，不會上傳到儲存庫，影響到整體專案</li>
+<li>手動進行安裝執行<br>2.1 使用 npm 等指令安裝<br>2.2 安裝後在 nuxt config 導入即可<br>2.3 有更多控制選項可以定義在 nuxt config<br>2.4 會上傳到儲存庫，所以會影響整個專案</li>
+</ol>
+<h3 id="使用-nuxi-指令"><a href="#使用-nuxi-指令" class="headerlink" title="使用 nuxi 指令"></a>使用 nuxi 指令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx nuxi@latest devtools <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+
+<p>這樣一句簡短的指令，就可以讓<code>nuxt-devtools</code>啟用在你的 Project 了！<br>當然，當你不需要或是其他狀況時，可以停用他：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx nuxi@latest devtools <span class="built_in">disable</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="手動進行安裝執行"><a href="#手動進行安裝執行" class="headerlink" title="手動進行安裝執行"></a>手動進行安裝執行</h3><p>先從 NPM 安裝：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i -D @nuxt/devtools</span><br></pre></td></tr></table></figure>
+
+<p>再導入至<code>nuxt.config.ts</code>：</p>
+<figure class="highlight typescript"><figcaption><span>nuxt.config.ts</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineNuxtConfig</span>(&#123;</span><br><span class="line">  <span class="attr">modules</span>: [</span><br><span class="line">    <span class="string">&#x27;@nuxt/devtools&#x27;</span>,</span><br><span class="line">  ],</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>這樣就算是安裝炳在 Nuxt Project 中啟用<code>nuxt-devtools</code>了！<br>當然，他有更多可選的的配置可以進行設置：</p>
+<figure class="highlight typescript"><figcaption><span>nuxt.config.ts</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineNuxtConfig</span>(&#123;</span><br><span class="line">  <span class="attr">modules</span>: [</span><br><span class="line">    <span class="string">&#x27;@nuxt/devtools&#x27;</span>,</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">devtools</span>: &#123;</span><br><span class="line">    <span class="comment">// Enable devtools (default: true)</span></span><br><span class="line">    <span class="attr">enabled</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="comment">// VS Code Server options</span></span><br><span class="line">    <span class="attr">vscode</span>: &#123;&#125;,</span><br><span class="line">    <span class="comment">// ...other options</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>兩種方式只要在 Nuxt 專案啟動後，在頁面中間下面看到一個 Nuxt 小 icon 就代表啟用&#x2F;安裝成功囉！</p>
+<p><img src="/blog/images/nuxt3-devtools/post_content_img_1.png"></p>
+<h2 id="特色"><a href="#特色" class="headerlink" title="特色"></a>特色</h2><p>這邊舉例幾個很有意思的功能來做介紹：</p>
+<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>在<code>Overview</code>中，可以即時的看到目前 Nuxt 的版本、頁面（Pages）總數、元件（Components）總數、引入的 Composables 總數、使用的 Module 總數和 Nuxt plugin 總數，總體啽言，就是一個快速瀏覽的 DashBoard。</p>
+<p><img src="/blog/images/nuxt3-devtools/post_content_img_2.png"></p>
+<p>其中一個小發現，當你的 Nuxt 版本不是最新的時候，點 Nuxt 的版本的欄位，他會幫你到 VS Code 的終端機幫你下<code>npx nuxi upgrade</code>的更新指令，挺方便的吧！就不用定期到<a href="https://www.npmjs.com/package/nuxt">npm&#x2F;nuxt</a>看有沒有更新了。</p>
+<h3 id="Pages"><a href="#Pages" class="headerlink" title="Pages"></a>Pages</h3><p>在<code>Pages</code>中，可以快速瀏覽到目前所有的 page，還可以知道現在 route 指向哪一個頁面，還有各頁面套用到哪一個<code>layout</code>。</p>
+<p><img src="/blog/images/nuxt3-devtools/post_content_img_3.png"></p>
+<p>最上面還有一個輸入框，可以更改現在的路徑，下面有一個區塊會即時顯示與你輸入的路徑有匹配到的路徑，輸入完成後 Enter 按下，就會立即跳到該路徑。</p>
+<p><img src="/blog/images/nuxt3-devtools/post_content_img_4.png"></p>
+<h3 id="Components"><a href="#Components" class="headerlink" title="Components"></a>Components</h3><p>在<code>Components</code>中，可以看到該 Nuxt Project 中，所有被定義的 Components，且還有根據來源&#x2F;用途進行分類。</p>
+<p><img src="/blog/images/nuxt3-devtools/post_content_img_5.png"><br>Components 的分類有：</p>
+<ul>
+<li>User Components 使用者定義的元件</li>
+<li>Runtime Components 執行期引入的元件</li>
+<li>Built-in Components Nuxt 內建提供的元件</li>
+<li>Components from libraries 從 Library 裡面引入的元件</li>
+</ul>
+<h3 id="Imports"><a href="#Imports" class="headerlink" title="Imports"></a>Imports</h3><p>在<code>Imports</code>中，可以看到該 Nuxt Project 中，有用到的 Composables，也有根據來源&#x2F;用途進行分類。</p>
+<ul>
+<li>User Components 使用者定義的元件，要放在<code>./composables</code>的目錄裡。</li>
+<li>Runtime Components 執行期引入的元件</li>
+<li>Built-in Components Nuxt 內建提供的元件</li>
+</ul>
+<p>會立即顯示你使用到哪些及使用次數，典籍使用處後，也會立即幫你在編輯器種顯示該檔案。</p>
+<p><img src="/blog/images/nuxt3-devtools/post_content_img_6.png"></p>
+<h3 id="Modules"><a href="#Modules" class="headerlink" title="Modules"></a>Modules</h3><p>在<code>Modules</code>中，會看到現在這個 Project 中有用到<code>nuxt.com/modules</code>裡的 Modules，可以簡單的看到大綱：</p>
+<p><img src="/blog/images/nuxt3-devtools/post_content_img_7.png"></p>
+<h3 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h3><p><code>Plugins</code>中列出你在<code>defineNuxtPlugin</code>或<code>./plugins</code>資料夾中，定義的所有<code>Plugins</code>：</p>
+<p><img src="/blog/images/nuxt3-devtools/post_content_img_8.png"></p>
+<h3 id="小節"><a href="#小節" class="headerlink" title="小節"></a>小節</h3><p>以上就是我覺得比較常用的功能，還有很多功能還沒有摸索，畢竟也才剛釋出，還有很多功能可以嘗試，而且<code>nuxt-devtools</code>也還在持續更新。</p>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p><code>nuxt-devtools</code>真的很實用，可以快速追蹤 components&#x2F;composables 等等的使用情況，方常方便、增加開發速度。雖然是選配的工具，但滿推薦開發時就搭配起來，他幫你彙整的資訊，也很清楚，在開發上也很有幫助！</p>
+<p>在<a href="https://github.com/nuxt/devtools/discussions">nuxt-devtools - discussions</a>中，也有<strong>Ideas Collection</strong>和<strong>Roadmap</strong>，可以討論，或是你有建議也可以提出！！！</p>
+]]></content>
+      <categories>
+        <category>Frontend</category>
+        <category>Nuxt3</category>
+      </categories>
+      <tags>
+        <tag>Nuxt3</tag>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Nuxt3介紹</title>
     <url>/blog/posts/nuxt3-introduction/</url>
     <content><![CDATA[<h1 id="Nuxt3-簡介"><a href="#Nuxt3-簡介" class="headerlink" title="Nuxt3 簡介"></a>Nuxt3 簡介</h1><h2 id="Nuxt3-template-x2F-Nuxt3-starter"><a href="#Nuxt3-template-x2F-Nuxt3-starter" class="headerlink" title="Nuxt3 template &#x2F; Nuxt3 starter"></a>Nuxt3 template &#x2F; Nuxt3 starter</h2><h5 id="一個自製的-nuxt3-template"><a href="#一個自製的-nuxt3-template" class="headerlink" title="一個自製的 nuxt3 template"></a><a href="https://github.com/ben890524/nuxt3-template">一個自製的 nuxt3 template</a></h5><ul>
@@ -154,7 +227,7 @@
 <h2 id="用途："><a href="#用途：" class="headerlink" title="用途："></a>用途：</h2><p>將 SPA 和 SSR 的好處結合在一起。在首個屏幕的頁面渲染較快，且支援良好的 SEO，且之後採用客戶端渲染（CSR, Client Side Render）的方式執行。所以常常會被同構、Hybird、混合等等的形容詞形容。</p>
 <h2 id="準備專案"><a href="#準備專案" class="headerlink" title="準備專案"></a>準備專案</h2><h3 id="創建專案"><a href="#創建專案" class="headerlink" title="創建專案"></a>創建專案</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx nuxi init [nuxt-app]</span><br><span class="line"><span class="built_in">cd</span> [nuxt-app]</span><br></pre></td></tr></table></figure>
 
-<p>若途中有詢問你是否要安裝<a href="mailto:&#x6e;&#x75;&#x78;&#116;&#x40;&#x33;&#46;&#48;&#46;&#x30;&#45;&#114;&#x63;">&#x6e;&#x75;&#x78;&#116;&#x40;&#x33;&#46;&#48;&#46;&#x30;&#45;&#114;&#x63;</a>.*，請按 Y。</p>
+<p>若途中有詢問你是否要安裝<a href="mailto:&#110;&#117;&#x78;&#x74;&#64;&#x33;&#46;&#48;&#x2e;&#48;&#x2d;&#114;&#99;">&#110;&#117;&#x78;&#x74;&#64;&#x33;&#46;&#48;&#x2e;&#48;&#x2d;&#114;&#99;</a>.*，請按 Y。</p>
 <h3 id="安裝依賴"><a href="#安裝依賴" class="headerlink" title="安裝依賴"></a>安裝依賴</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
 <p>推薦使用 Npm、Yarn 套件管理程式，PNpM 現階段要加參數（–shamefully-hoist）才可正常 Install。</p>
@@ -227,54 +300,6 @@
       <tags>
         <tag>Nuxt3</tag>
         <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>物件導向 特性 - 物件導向四大特性</title>
-    <url>/blog/posts/object-oriented-features-concepts/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇要來介紹物件導向的四大概念，那就來簡單介紹物件導向是怎麼樣的概念~<br>物件導向是將大部分的程式碼變成像是物件的方式進行呈現，程式互相會是以物件的方式進行溝通。物件跟物件之間的溝通，可以想成是人與人進行溝通，每個人都會有姓名、性別、年齡等等，這些在物件就是<strong>屬性（Attributes）</strong>；每個人也都會有技能或是動作，在物件我們就稱它為<strong>方法（Methods）</strong>。<br>一個物件會由屬性跟方法所組成，但這個時候你可能會有一些困惑，如果人是一個物件，但有可能我有一些事情是不想要給別人知道的，那該怎麼辦？<br>物件的屬性和方法都有它的<strong>可視性（Visibility）</strong>，可以使比較敏感的資料不被揭露，達到資料隱藏（Information Hiding）的效果。<br>簡單的介紹完物件導向的基本後，就來介紹物件導向的四大基本概念吧~</p>
-<h2 id="物件導向四大基本概念"><a href="#物件導向四大基本概念" class="headerlink" title="物件導向四大基本概念"></a>物件導向四大基本概念</h2><ol>
-<li>封裝（Encapsulation）</li>
-<li>抽象（Abstraction）</li>
-<li>繼承（Inheritance）</li>
-<li>多型（Polymorphism）</li>
-</ol>
-<h3 id="封裝（Encapsulation）"><a href="#封裝（Encapsulation）" class="headerlink" title="封裝（Encapsulation）"></a>封裝（Encapsulation）</h3><p>通常一個物件會有一些讀寫的限制，像是public或是private等等的限制。封裝是對一個物件的規範，物件不能將所有資訊顯露給使用者（caller），若是一個物件的部分資訊比較敏感，這些資訊又全都顯露給使用者，就會有安全的問題，可以想像使用者只要知道物件有甚麼方法，不需要知道是怎麼實作的，也就是資料隱藏（Information hiding）。</p>
-<p>以下以一個C#簡單的getter和setter來解釋：</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Student</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="built_in">int</span> Age &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 上面是C#的寫法，在其他物件導向語言，大致上要表達的意思下</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Student</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">int</span> _age;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">GetAge</span>()</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">return</span> _age;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetAge</span>(<span class="params"><span class="built_in">int</span> age</span>)</span></span><br><span class="line">  &#123;</span><br><span class="line">    _age = age;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>有一個Student Class有Age這個屬性（Attribute），且<code>定義&#123; get; set; &#125;</code>，代表他有public的getter和setter，皆為任何使用者都可以使用的。</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Student</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="built_in">int</span> Age &#123; <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 上面是C#的寫法，在其他物件導向語言，大致上要表達的意思下</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Student</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">int</span> _age;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">GetAge</span>()</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">return</span> _age;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">SetAge</span>(<span class="params"><span class="built_in">int</span> age</span>)</span></span><br><span class="line">  &#123;</span><br><span class="line">    _age = age;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>有一個Student有Age這個屬性(Attribute)，且<code>定義&#123; get; private set; &#125;</code>，代表他有public的getter和private的setter，private的setter只有在自己這個物件裡面可以被調用。</p>
-<h3 id="抽象（Abstraction）"><a href="#抽象（Abstraction）" class="headerlink" title="抽象（Abstraction）"></a>抽象（Abstraction）</h3><p>會定義一個父類別，父類別會先有一線基本功能，也可以擁有一些已經被定義的方法和抽象方法，抽象方法像是abstract function或implement function，這類型的方法不能夠再父類別被實作，會在繼承的子類進行實作，但抽象方便規方便但不能濫用。</p>
-<p>定義一個抽象的父類，且有抽象方法並未實作：</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title">Bird</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">Fly</span>()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>繼承抽象父類後，一定要實作父類的抽象方法：</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SomeBird</span>:<span class="title">Bird</span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Fly</span>()</span> =&gt; Console.WriteLine(<span class="string">&quot;I can fly.&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="繼承（Inheritance）"><a href="#繼承（Inheritance）" class="headerlink" title="繼承（Inheritance）"></a>繼承（Inheritance）</h3><p>會基於某個父類別對物件的定義加以擴充，子類別可以繼承父類別原來的某些定義，並也可能增加原來的父類別所沒有的定義，或者是重新定義父類別中的某些特性（Override），但在定義父類別與繼承子類別時一定要遵守IS-A的概念。<br>IS-A概念就是：假如要使A Class繼承B Class，那A就一定要是一種B，A is a kind of B.</p>
-<p>以下是bird的父類，有一個fly()的方法。</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Bird</span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Fly</span>()</span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;Bird can fly.&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以下是繼承bird父類並擴充的子類”鴿子”（Pigeon）：</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Pigeon</span>:<span class="title">Bird</span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">int</span> speed = <span class="number">20</span>;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Fly</span>()</span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;Pigeon can fly.&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>下列未遵守IS-A概念：</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Penguin</span>:<span class="title">Bird</span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Fly</span>()</span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;Penguin ???&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>企鵝不會飛，但是卻給牠一個飛行的方法，明顯的企鵝不是一種會飛的鳥類。</p>
-<h3 id="多型（Polymorphism）"><a href="#多型（Polymorphism）" class="headerlink" title="多型（Polymorphism）"></a>多型（Polymorphism）</h3><p>多型是指的是使用同一個操作介面，以操作不同的物件實例，多型操作在物件導向上是為了降低對操作介面的依賴程度，這是一種抽換概念，之後在各式Design Pattern中會常用到此概念。</p>
-<p>今天有一個Service的class專門計算一台手機打折過後的價格：</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SaleService</span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">double</span> _discount = <span class="number">0.8</span>;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="built_in">double</span> <span class="title">IphonePriceWithDiscount</span>(<span class="params">Iphone phone</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> phone.price * <span class="keyword">this</span>._discount;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="built_in">double</span> <span class="title">AndroidPriceWithDiscount</span>(<span class="params">Android phone</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> phone.price * <span class="keyword">this</span>._discount;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>從上述程式碼發現，如果我每有一種作業系統的手機，我就要新增一種方法去計算那種作業系統手機的價格。<br>所以定義一種操作介面為父類，讓各式作業系統的手機繼承，並對一種操作介面進行操作即可。</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Phone</span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="built_in">int</span> phonePrice &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Phone</span>(<span class="params"><span class="built_in">int</span> price</span>)</span>&#123;</span><br><span class="line">    phonePrice = price;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Iphone</span>:<span class="title">Phone</span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Iphone</span>(<span class="params"><span class="built_in">int</span> price</span>):<span class="title">base</span>(<span class="params">price</span>)</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Android</span>:<span class="title">Phone</span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Android</span>(<span class="params"><span class="built_in">int</span> price</span>):<span class="title">base</span>(<span class="params">price</span>)</span>&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>根據上方更改後的程式碼，可以對Service進行改造：</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SaleService</span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">double</span> _discount = <span class="number">0.8</span>;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="built_in">double</span> <span class="title">PhonePriceWithDiscount</span>(<span class="params">Phone phone</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> phone.phonePrice * <span class="keyword">this</span>._discount;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>本篇簡單的介紹了物件導向，也介紹了物件導向的四大基本概念，封裝、抽象、繼承和多型，物件導向程式設計都會圍繞在些概念作為基礎，去做發想，有很多變化。目前很多的後端語言也都是物件導向的，像是C#、Java、Javascript等等，但也有一些不是物件導向的後端語言，像是Golang等等，所以學會物件導向設計理念後，在各個物件導向語言之間轉換，就比較不會花更多時間，就可以專心研究語言的語法跟特性上。<br>有了物件導向的概念對程式的敏感度也會上升，後續也有一些原則是建立在物件導向概念上的，像是SOLID原則，或是Design Pattern，所以把物件導向程式設計學好一定不會吃虧，我有時也會將生活中的一些東西，想成是物件XD，所以學習也可以為生活中增添一番趣味（？<br>如果本篇有誤，可以聯繫我，讓我修正QAQ，之後有空應該會介紹物件導向的五大原則SOLID~</p>
-]]></content>
-      <categories>
-        <category>Object Oriented</category>
-      </categories>
-      <tags>
-        <tag>Object Oriented</tag>
-        <tag>C#</tag>
       </tags>
   </entry>
   <entry>
@@ -520,6 +545,54 @@
         <tag>Frontend</tag>
         <tag>Nuxt3</tag>
         <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>物件導向 特性 - 物件導向四大特性</title>
+    <url>/blog/posts/object-oriented-features-concepts/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇要來介紹物件導向的四大概念，那就來簡單介紹物件導向是怎麼樣的概念~<br>物件導向是將大部分的程式碼變成像是物件的方式進行呈現，程式互相會是以物件的方式進行溝通。物件跟物件之間的溝通，可以想成是人與人進行溝通，每個人都會有姓名、性別、年齡等等，這些在物件就是<strong>屬性（Attributes）</strong>；每個人也都會有技能或是動作，在物件我們就稱它為<strong>方法（Methods）</strong>。<br>一個物件會由屬性跟方法所組成，但這個時候你可能會有一些困惑，如果人是一個物件，但有可能我有一些事情是不想要給別人知道的，那該怎麼辦？<br>物件的屬性和方法都有它的<strong>可視性（Visibility）</strong>，可以使比較敏感的資料不被揭露，達到資料隱藏（Information Hiding）的效果。<br>簡單的介紹完物件導向的基本後，就來介紹物件導向的四大基本概念吧~</p>
+<h2 id="物件導向四大基本概念"><a href="#物件導向四大基本概念" class="headerlink" title="物件導向四大基本概念"></a>物件導向四大基本概念</h2><ol>
+<li>封裝（Encapsulation）</li>
+<li>抽象（Abstraction）</li>
+<li>繼承（Inheritance）</li>
+<li>多型（Polymorphism）</li>
+</ol>
+<h3 id="封裝（Encapsulation）"><a href="#封裝（Encapsulation）" class="headerlink" title="封裝（Encapsulation）"></a>封裝（Encapsulation）</h3><p>通常一個物件會有一些讀寫的限制，像是public或是private等等的限制。封裝是對一個物件的規範，物件不能將所有資訊顯露給使用者（caller），若是一個物件的部分資訊比較敏感，這些資訊又全都顯露給使用者，就會有安全的問題，可以想像使用者只要知道物件有甚麼方法，不需要知道是怎麼實作的，也就是資料隱藏（Information hiding）。</p>
+<p>以下以一個C#簡單的getter和setter來解釋：</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Student</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="built_in">int</span> Age &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 上面是C#的寫法，在其他物件導向語言，大致上要表達的意思下</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Student</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">int</span> _age;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">GetAge</span>()</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">return</span> _age;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetAge</span>(<span class="params"><span class="built_in">int</span> age</span>)</span></span><br><span class="line">  &#123;</span><br><span class="line">    _age = age;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有一個Student Class有Age這個屬性（Attribute），且<code>定義&#123; get; set; &#125;</code>，代表他有public的getter和setter，皆為任何使用者都可以使用的。</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Student</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="built_in">int</span> Age &#123; <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 上面是C#的寫法，在其他物件導向語言，大致上要表達的意思下</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Student</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">int</span> _age;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">GetAge</span>()</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">return</span> _age;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">SetAge</span>(<span class="params"><span class="built_in">int</span> age</span>)</span></span><br><span class="line">  &#123;</span><br><span class="line">    _age = age;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有一個Student有Age這個屬性(Attribute)，且<code>定義&#123; get; private set; &#125;</code>，代表他有public的getter和private的setter，private的setter只有在自己這個物件裡面可以被調用。</p>
+<h3 id="抽象（Abstraction）"><a href="#抽象（Abstraction）" class="headerlink" title="抽象（Abstraction）"></a>抽象（Abstraction）</h3><p>會定義一個父類別，父類別會先有一線基本功能，也可以擁有一些已經被定義的方法和抽象方法，抽象方法像是abstract function或implement function，這類型的方法不能夠再父類別被實作，會在繼承的子類進行實作，但抽象方便規方便但不能濫用。</p>
+<p>定義一個抽象的父類，且有抽象方法並未實作：</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title">Bird</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">Fly</span>()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>繼承抽象父類後，一定要實作父類的抽象方法：</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SomeBird</span>:<span class="title">Bird</span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Fly</span>()</span> =&gt; Console.WriteLine(<span class="string">&quot;I can fly.&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="繼承（Inheritance）"><a href="#繼承（Inheritance）" class="headerlink" title="繼承（Inheritance）"></a>繼承（Inheritance）</h3><p>會基於某個父類別對物件的定義加以擴充，子類別可以繼承父類別原來的某些定義，並也可能增加原來的父類別所沒有的定義，或者是重新定義父類別中的某些特性（Override），但在定義父類別與繼承子類別時一定要遵守IS-A的概念。<br>IS-A概念就是：假如要使A Class繼承B Class，那A就一定要是一種B，A is a kind of B.</p>
+<p>以下是bird的父類，有一個fly()的方法。</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Bird</span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Fly</span>()</span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;Bird can fly.&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以下是繼承bird父類並擴充的子類”鴿子”（Pigeon）：</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Pigeon</span>:<span class="title">Bird</span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">int</span> speed = <span class="number">20</span>;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Fly</span>()</span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;Pigeon can fly.&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>下列未遵守IS-A概念：</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Penguin</span>:<span class="title">Bird</span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Fly</span>()</span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;Penguin ???&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>企鵝不會飛，但是卻給牠一個飛行的方法，明顯的企鵝不是一種會飛的鳥類。</p>
+<h3 id="多型（Polymorphism）"><a href="#多型（Polymorphism）" class="headerlink" title="多型（Polymorphism）"></a>多型（Polymorphism）</h3><p>多型是指的是使用同一個操作介面，以操作不同的物件實例，多型操作在物件導向上是為了降低對操作介面的依賴程度，這是一種抽換概念，之後在各式Design Pattern中會常用到此概念。</p>
+<p>今天有一個Service的class專門計算一台手機打折過後的價格：</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SaleService</span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">double</span> _discount = <span class="number">0.8</span>;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="built_in">double</span> <span class="title">IphonePriceWithDiscount</span>(<span class="params">Iphone phone</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> phone.price * <span class="keyword">this</span>._discount;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="built_in">double</span> <span class="title">AndroidPriceWithDiscount</span>(<span class="params">Android phone</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> phone.price * <span class="keyword">this</span>._discount;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>從上述程式碼發現，如果我每有一種作業系統的手機，我就要新增一種方法去計算那種作業系統手機的價格。<br>所以定義一種操作介面為父類，讓各式作業系統的手機繼承，並對一種操作介面進行操作即可。</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Phone</span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="built_in">int</span> phonePrice &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Phone</span>(<span class="params"><span class="built_in">int</span> price</span>)</span>&#123;</span><br><span class="line">    phonePrice = price;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Iphone</span>:<span class="title">Phone</span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Iphone</span>(<span class="params"><span class="built_in">int</span> price</span>):<span class="title">base</span>(<span class="params">price</span>)</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Android</span>:<span class="title">Phone</span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Android</span>(<span class="params"><span class="built_in">int</span> price</span>):<span class="title">base</span>(<span class="params">price</span>)</span>&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>根據上方更改後的程式碼，可以對Service進行改造：</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SaleService</span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">double</span> _discount = <span class="number">0.8</span>;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="built_in">double</span> <span class="title">PhonePriceWithDiscount</span>(<span class="params">Phone phone</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> phone.phonePrice * <span class="keyword">this</span>._discount;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>本篇簡單的介紹了物件導向，也介紹了物件導向的四大基本概念，封裝、抽象、繼承和多型，物件導向程式設計都會圍繞在些概念作為基礎，去做發想，有很多變化。目前很多的後端語言也都是物件導向的，像是C#、Java、Javascript等等，但也有一些不是物件導向的後端語言，像是Golang等等，所以學會物件導向設計理念後，在各個物件導向語言之間轉換，就比較不會花更多時間，就可以專心研究語言的語法跟特性上。<br>有了物件導向的概念對程式的敏感度也會上升，後續也有一些原則是建立在物件導向概念上的，像是SOLID原則，或是Design Pattern，所以把物件導向程式設計學好一定不會吃虧，我有時也會將生活中的一些東西，想成是物件XD，所以學習也可以為生活中增添一番趣味（？<br>如果本篇有誤，可以聯繫我，讓我修正QAQ，之後有空應該會介紹物件導向的五大原則SOLID~</p>
+]]></content>
+      <categories>
+        <category>Object Oriented</category>
+      </categories>
+      <tags>
+        <tag>Object Oriented</tag>
+        <tag>C#</tag>
       </tags>
   </entry>
 </search>

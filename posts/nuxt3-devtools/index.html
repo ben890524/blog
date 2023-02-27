@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>nuxt3 開發者工具 | 猴子Ben不見</title><meta name="author" content="猴子 Ben"><meta name="copyright" content="猴子 Ben"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="fffdfa"><meta name="description" content="Nuxt3 開發者工具 &#x2F; Nuxt3-Devtools前言就在二月上旬，Nuxt 大佬 antfu (Anthony Fu)，發佈了Nuxt3 開發者工具（nuxt-devtools），可以讓我們這些 Nuxt 開發者，在開發中有更好的體驗和及時的追蹤。 版本限制nuxt-devtools釋出前，nuxt 發行正式版一段時間了，所以nuxt-devtools有一些版本的限制：  Nux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nuxt3 開發者工具">
+<meta property="og:url" content="https://ben890524.github.io/blog/posts/nuxt3-devtools/index.html">
+<meta property="og:site_name" content="猴子Ben不見">
+<meta property="og:description" content="Nuxt3 開發者工具 &#x2F; Nuxt3-Devtools前言就在二月上旬，Nuxt 大佬 antfu (Anthony Fu)，發佈了Nuxt3 開發者工具（nuxt-devtools），可以讓我們這些 Nuxt 開發者，在開發中有更好的體驗和及時的追蹤。 版本限制nuxt-devtools釋出前，nuxt 發行正式版一段時間了，所以nuxt-devtools有一些版本的限制：  Nux">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://ben890524.github.io/blog/images/nuxt3-introduction/cover.png">
+<meta property="article:published_time" content="2023-02-27T07:31:12.000Z">
+<meta property="article:modified_time" content="2023-02-27T09:29:03.204Z">
+<meta property="article:author" content="猴子 Ben">
+<meta property="article:tag" content="Nuxt3">
+<meta property="article:tag" content="Vue">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ben890524.github.io/blog/images/nuxt3-introduction/cover.png"><link rel="shortcut icon" href="/blog/images/favicon.ico"><link rel="canonical" href="https://ben890524.github.io/blog/posts/nuxt3-devtools/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/blog/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/blog/',
+  algolia: undefined,
+  localSearch: {"path":"/blog/search.xml","preload":true,"languages":{"hits_empty":"找不到您查詢的內容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'nuxt3 開發者工具',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-02-27 17:29:03'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'fffdfa')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/blog/css/header.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/blog/images/blogger_avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/blog/tags/"><div class="headline">標籤</div><div class="length-num">12</div></a><a href="/blog/categories/"><div class="headline">分類</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 關於我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/blog/images/default_banner.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/blog/">猴子Ben不見</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜尋</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 關於我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">nuxt3 開發者工具</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2023-02-27T07:31:12.000Z" title="發表於 2023-02-27 15:31:12">2023-02-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2023-02-27T09:29:03.204Z" title="更新於 2023-02-27 17:29:03">2023-02-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/blog/categories/Frontend/">Frontend</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/blog/categories/Frontend/Nuxt3/">Nuxt3</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字數總計:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀時長:</span><span>4分鐘</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="nuxt3 開發者工具"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Nuxt3-開發者工具-x2F-Nuxt3-Devtools"><a href="#Nuxt3-開發者工具-x2F-Nuxt3-Devtools" class="headerlink" title="Nuxt3 開發者工具 &#x2F; Nuxt3-Devtools"></a>Nuxt3 開發者工具 &#x2F; Nuxt3-Devtools</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>就在二月上旬，Nuxt 大佬 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/antfu">antfu (Anthony Fu)</a>，發佈了<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/nuxt/devtools">Nuxt3 開發者工具（nuxt-devtools）</a>，可以讓我們這些 Nuxt 開發者，在開發中有更好的體驗和及時的追蹤。</p>
+<h2 id="版本限制"><a href="#版本限制" class="headerlink" title="版本限制"></a>版本限制</h2><p><code>nuxt-devtools</code>釋出前，nuxt 發行正式版一段時間了，所以<code>nuxt-devtools</code>有一些版本的限制：</p>
+<ul>
+<li>Nuxt DevTools requires Nuxt v3.1.0 or higher.</li>
+</ul>
+<p>只要是在 Nuxt v3.1.0 以上的版本，皆可以安裝，也可以直接進行 Nuxt 更新，更新到最新的版本。<br>若要更新，可以使用 Nuxt 內建的函式庫 Nuxi 來更新。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx nuxi upgrade</span><br></pre></td></tr></table></figure>
+
+<h2 id="安裝方式"><a href="#安裝方式" class="headerlink" title="安裝方式"></a>安裝方式</h2><h3 id="簡短介紹"><a href="#簡短介紹" class="headerlink" title="簡短介紹"></a>簡短介紹</h3><p><code>nuxt-devtools</code>官方文件有提供兩個方式安裝，這邊簡單的用條列式，分析一下兩個方式的差異：</p>
+<ol>
+<li>使用 nuxi 指令依據各 Project 啟動<br>1.1 使用 nuxi 指令就可以開啟<br>1.2 是依照 Project 來執行 nuxt-devtools 的，不會因為開啟後，所有 nuxt3 Project 都開啟<br>1.3 設定會儲存在本地的資料夾<code>~/.nuxtrc</code>裡，不會上傳到儲存庫，影響到整體專案</li>
+<li>手動進行安裝執行<br>2.1 使用 npm 等指令安裝<br>2.2 安裝後在 nuxt config 導入即可<br>2.3 有更多控制選項可以定義在 nuxt config<br>2.4 會上傳到儲存庫，所以會影響整個專案</li>
+</ol>
+<h3 id="使用-nuxi-指令"><a href="#使用-nuxi-指令" class="headerlink" title="使用 nuxi 指令"></a>使用 nuxi 指令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx nuxi@latest devtools <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+
+<p>這樣一句簡短的指令，就可以讓<code>nuxt-devtools</code>啟用在你的 Project 了！<br>當然，當你不需要或是其他狀況時，可以停用他：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx nuxi@latest devtools <span class="built_in">disable</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="手動進行安裝執行"><a href="#手動進行安裝執行" class="headerlink" title="手動進行安裝執行"></a>手動進行安裝執行</h3><p>先從 NPM 安裝：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D @nuxt/devtools</span><br></pre></td></tr></table></figure>
+
+<p>再導入至<code>nuxt.config.ts</code>：</p>
+<figure class="highlight typescript"><figcaption><span>nuxt.config.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineNuxtConfig</span>(&#123;</span><br><span class="line">  <span class="attr">modules</span>: [</span><br><span class="line">    <span class="string">&#x27;@nuxt/devtools&#x27;</span>,</span><br><span class="line">  ],</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>這樣就算是安裝炳在 Nuxt Project 中啟用<code>nuxt-devtools</code>了！<br>當然，他有更多可選的的配置可以進行設置：</p>
+<figure class="highlight typescript"><figcaption><span>nuxt.config.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineNuxtConfig</span>(&#123;</span><br><span class="line">  <span class="attr">modules</span>: [</span><br><span class="line">    <span class="string">&#x27;@nuxt/devtools&#x27;</span>,</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">devtools</span>: &#123;</span><br><span class="line">    <span class="comment">// Enable devtools (default: true)</span></span><br><span class="line">    <span class="attr">enabled</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="comment">// VS Code Server options</span></span><br><span class="line">    <span class="attr">vscode</span>: &#123;&#125;,</span><br><span class="line">    <span class="comment">// ...other options</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>兩種方式只要在 Nuxt 專案啟動後，在頁面中間下面看到一個 Nuxt 小 icon 就代表啟用&#x2F;安裝成功囉！</p>
+<p><img src="/blog/images/nuxt3-devtools/post_content_img_1.png"></p>
+<h2 id="特色"><a href="#特色" class="headerlink" title="特色"></a>特色</h2><p>這邊舉例幾個很有意思的功能來做介紹：</p>
+<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>在<code>Overview</code>中，可以即時的看到目前 Nuxt 的版本、頁面（Pages）總數、元件（Components）總數、引入的 Composables 總數、使用的 Module 總數和 Nuxt plugin 總數，總體啽言，就是一個快速瀏覽的 DashBoard。</p>
+<p><img src="/blog/images/nuxt3-devtools/post_content_img_2.png"></p>
+<p>其中一個小發現，當你的 Nuxt 版本不是最新的時候，點 Nuxt 的版本的欄位，他會幫你到 VS Code 的終端機幫你下<code>npx nuxi upgrade</code>的更新指令，挺方便的吧！就不用定期到<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.npmjs.com/package/nuxt">npm&#x2F;nuxt</a>看有沒有更新了。</p>
+<h3 id="Pages"><a href="#Pages" class="headerlink" title="Pages"></a>Pages</h3><p>在<code>Pages</code>中，可以快速瀏覽到目前所有的 page，還可以知道現在 route 指向哪一個頁面，還有各頁面套用到哪一個<code>layout</code>。</p>
+<p><img src="/blog/images/nuxt3-devtools/post_content_img_3.png"></p>
+<p>最上面還有一個輸入框，可以更改現在的路徑，下面有一個區塊會即時顯示與你輸入的路徑有匹配到的路徑，輸入完成後 Enter 按下，就會立即跳到該路徑。</p>
+<p><img src="/blog/images/nuxt3-devtools/post_content_img_4.png"></p>
+<h3 id="Components"><a href="#Components" class="headerlink" title="Components"></a>Components</h3><p>在<code>Components</code>中，可以看到該 Nuxt Project 中，所有被定義的 Components，且還有根據來源&#x2F;用途進行分類。</p>
+<p><img src="/blog/images/nuxt3-devtools/post_content_img_5.png"><br>Components 的分類有：</p>
+<ul>
+<li>User Components 使用者定義的元件</li>
+<li>Runtime Components 執行期引入的元件</li>
+<li>Built-in Components Nuxt 內建提供的元件</li>
+<li>Components from libraries 從 Library 裡面引入的元件</li>
+</ul>
+<h3 id="Imports"><a href="#Imports" class="headerlink" title="Imports"></a>Imports</h3><p>在<code>Imports</code>中，可以看到該 Nuxt Project 中，有用到的 Composables，也有根據來源&#x2F;用途進行分類。</p>
+<ul>
+<li>User Components 使用者定義的元件，要放在<code>./composables</code>的目錄裡。</li>
+<li>Runtime Components 執行期引入的元件</li>
+<li>Built-in Components Nuxt 內建提供的元件</li>
+</ul>
+<p>會立即顯示你使用到哪些及使用次數，典籍使用處後，也會立即幫你在編輯器種顯示該檔案。</p>
+<p><img src="/blog/images/nuxt3-devtools/post_content_img_6.png"></p>
+<h3 id="Modules"><a href="#Modules" class="headerlink" title="Modules"></a>Modules</h3><p>在<code>Modules</code>中，會看到現在這個 Project 中有用到<code>nuxt.com/modules</code>裡的 Modules，可以簡單的看到大綱：</p>
+<p><img src="/blog/images/nuxt3-devtools/post_content_img_7.png"></p>
+<h3 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h3><p><code>Plugins</code>中列出你在<code>defineNuxtPlugin</code>或<code>./plugins</code>資料夾中，定義的所有<code>Plugins</code>：</p>
+<p><img src="/blog/images/nuxt3-devtools/post_content_img_8.png"></p>
+<h3 id="小節"><a href="#小節" class="headerlink" title="小節"></a>小節</h3><p>以上就是我覺得比較常用的功能，還有很多功能還沒有摸索，畢竟也才剛釋出，還有很多功能可以嘗試，而且<code>nuxt-devtools</code>也還在持續更新。</p>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p><code>nuxt-devtools</code>真的很實用，可以快速追蹤 components&#x2F;composables 等等的使用情況，方常方便、增加開發速度。雖然是選配的工具，但滿推薦開發時就搭配起來，他幫你彙整的資訊，也很清楚，在開發上也很有幫助！</p>
+<p>在<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/nuxt/devtools/discussions">nuxt-devtools - discussions</a>中，也有<strong>Ideas Collection</strong>和<strong>Roadmap</strong>，可以討論，或是你有建議也可以提出！！！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://ben890524.github.io/blog">猴子 Ben</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://ben890524.github.io/blog/posts/nuxt3-devtools/">https://ben890524.github.io/blog/posts/nuxt3-devtools/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://ben890524.github.io/blog" target="_blank">猴子Ben不見</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/blog/tags/Nuxt3/">Nuxt3</a><a class="post-meta__tags" href="/blog/tags/Vue/">Vue</a></div><div class="post_share"><div class="social-share" data-image="/blog/images/nuxt3-introduction/cover.png" data-sites="facebook,twitter,wechat,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/blog/posts/vue3-nuxt3-v-html-deep-selector/"><img class="next-cover" src="/blog/images/vue3-nuxt3-v-html-deep-selector/cover.png" onerror="onerror=null;src='/blog/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Vue3 v-html / Nuxt3 v-html / css深度選擇器</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相關推薦</span></div><div class="relatedPosts-list"><div><a href="/blog/posts/nuxt3-introduction/" title="Nuxt3介紹"><img class="cover" src="/blog/images/nuxt3-introduction/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-16</div><div class="title">Nuxt3介紹</div></div></a></div><div><a href="/blog/posts/vue3-nuxt3-v-html-deep-selector/" title="Vue3 v-html &#x2F; Nuxt3 v-html &#x2F; css深度選擇器"><img class="cover" src="/blog/images/vue3-nuxt3-v-html-deep-selector/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-01-12</div><div class="title">Vue3 v-html &#x2F; Nuxt3 v-html &#x2F; css深度選擇器</div></div></a></div><div><a href="/blog/posts/vue-google-recaptcha/" title="Vue 實作 Google reCAPTCHA &#x2F; Google 非機器人驗證"><img class="cover" src="/blog/images/vue-google-recaptcha/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-21</div><div class="title">Vue 實作 Google reCAPTCHA &#x2F; Google 非機器人驗證</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/blog/images/blogger_avatar.jpg" onerror="this.onerror=null;this.src='/blog/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">猴子 Ben</div><div class="author-info__description">這裡是努力成為前端工程師的猴子，這裡有很多前端、工作上的分享，歡迎來逛逛~</div></div><div class="card-info-data site-data is-center"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/blog/tags/"><div class="headline">標籤</div><div class="length-num">12</div></a><a href="/blog/categories/"><div class="headline">分類</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ben890524"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://www.instagram.com/ben890524" rel="external nofollow noreferrer" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a><a class="social-icon" href="https://www.linkedin.com/in/%E7%A7%89%E6%AC%A3-%E6%9D%8E-319884201/" rel="external nofollow noreferrer" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">部落格還在努力生成中QAQ</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Nuxt3-%E9%96%8B%E7%99%BC%E8%80%85%E5%B7%A5%E5%85%B7-x2F-Nuxt3-Devtools"><span class="toc-number">1.</span> <span class="toc-text">Nuxt3 開發者工具 &#x2F; Nuxt3-Devtools</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E9%99%90%E5%88%B6"><span class="toc-number">1.2.</span> <span class="toc-text">版本限制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D%E6%96%B9%E5%BC%8F"><span class="toc-number">1.3.</span> <span class="toc-text">安裝方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B0%A1%E7%9F%AD%E4%BB%8B%E7%B4%B9"><span class="toc-number">1.3.1.</span> <span class="toc-text">簡短介紹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-nuxi-%E6%8C%87%E4%BB%A4"><span class="toc-number">1.3.2.</span> <span class="toc-text">使用 nuxi 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E5%8B%95%E9%80%B2%E8%A1%8C%E5%AE%89%E8%A3%9D%E5%9F%B7%E8%A1%8C"><span class="toc-number">1.3.3.</span> <span class="toc-text">手動進行安裝執行</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E8%89%B2"><span class="toc-number">1.4.</span> <span class="toc-text">特色</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Overview"><span class="toc-number">1.4.1.</span> <span class="toc-text">Overview</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pages"><span class="toc-number">1.4.2.</span> <span class="toc-text">Pages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Components"><span class="toc-number">1.4.3.</span> <span class="toc-text">Components</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Imports"><span class="toc-number">1.4.4.</span> <span class="toc-text">Imports</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Modules"><span class="toc-number">1.4.5.</span> <span class="toc-text">Modules</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Plugins"><span class="toc-number">1.4.6.</span> <span class="toc-text">Plugins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%AF%80"><span class="toc-number">1.4.7.</span> <span class="toc-text">小節</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B5%90%E8%AB%96"><span class="toc-number">1.5.</span> <span class="toc-text">結論</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/blog/posts/nuxt3-devtools/" title="nuxt3 開發者工具"><img src="/blog/images/nuxt3-introduction/cover.png" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="nuxt3 開發者工具"/></a><div class="content"><a class="title" href="/blog/posts/nuxt3-devtools/" title="nuxt3 開發者工具">nuxt3 開發者工具</a><time datetime="2023-02-27T07:31:12.000Z" title="發表於 2023-02-27 15:31:12">2023-02-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/posts/vue3-nuxt3-v-html-deep-selector/" title="Vue3 v-html / Nuxt3 v-html / css深度選擇器"><img src="/blog/images/vue3-nuxt3-v-html-deep-selector/cover.png" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="Vue3 v-html / Nuxt3 v-html / css深度選擇器"/></a><div class="content"><a class="title" href="/blog/posts/vue3-nuxt3-v-html-deep-selector/" title="Vue3 v-html / Nuxt3 v-html / css深度選擇器">Vue3 v-html / Nuxt3 v-html / css深度選擇器</a><time datetime="2023-01-12T08:11:17.000Z" title="發表於 2023-01-12 16:11:17">2023-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/posts/vue-google-recaptcha/" title="Vue 實作 Google reCAPTCHA / Google 非機器人驗證"><img src="/blog/images/vue-google-recaptcha/cover.png" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="Vue 實作 Google reCAPTCHA / Google 非機器人驗證"/></a><div class="content"><a class="title" href="/blog/posts/vue-google-recaptcha/" title="Vue 實作 Google reCAPTCHA / Google 非機器人驗證">Vue 實作 Google reCAPTCHA / Google 非機器人驗證</a><time datetime="2022-12-21T05:58:25.000Z" title="發表於 2022-12-21 13:58:25">2022-12-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/posts/frontend-knowledge/" title="前端知識區 / 前端面試題"><img src="/blog/images/favicon.ico" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="前端知識區 / 前端面試題"/></a><div class="content"><a class="title" href="/blog/posts/frontend-knowledge/" title="前端知識區 / 前端面試題">前端知識區 / 前端面試題</a><time datetime="2022-12-16T03:18:45.000Z" title="發表於 2022-12-16 11:18:45">2022-12-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/posts/nuxt3-introduction/" title="Nuxt3介紹"><img src="/blog/images/nuxt3-introduction/cover.png" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="Nuxt3介紹"/></a><div class="content"><a class="title" href="/blog/posts/nuxt3-introduction/" title="Nuxt3介紹">Nuxt3介紹</a><time datetime="2022-12-16T03:02:37.000Z" title="發表於 2022-12-16 11:02:37">2022-12-16</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/blog/images/default_footer_img.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By 猴子 Ben</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">到最底啦！往上一點吧 ~<br>Top / Footer Image from Pattern Library.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜尋</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  資料庫載入中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/blog/js/utils.js"></script><script src="/blog/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/blog/js/search/local-search.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
